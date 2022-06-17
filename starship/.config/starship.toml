@@ -2,9 +2,15 @@
 add_newline = false
 
 format = """
-[┌─](white)$directory$time $git_branch$git_commit$git_state$git_status$package$cmake$dart$dotnet$premake$golang$java$kotlin$nodejs$perl$php$python$ruby$rust
+[┌─](white)$directory$time $git_branch$git_commit$git_state$git_status
 [└──>](white) $username $character
 """
+
+# format = """
+# [┌─](white)$directory$time $git_branch$git_commit$git_state$git_status$package$cmake$dart$dotnet$premake$golang$java$kotlin$nodejs$perl$php$python$ruby$rust
+# [└──>](white) $username $character
+# """
+
 
 [character]
 success_symbol = "[](green)"
@@ -25,74 +31,7 @@ style_user = "white bold"
 style_root = "yellow bold"
 format = "[λ]($style) [|](bold blue)"
 
-[aws]
-symbol = "  "
 
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[git_branch]
-symbol = " "
-
-[git_status]
-
-[golang]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[memory_usage]
-symbol = " "
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
-
-[package]
-symbol = " "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[python]
-symbol = " "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = " "
-
-[scala]
-symbol = " "
-
-[shlvl]
-symbol = " "
-
-[swift]
-symbol = "ﯣ "
-
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
