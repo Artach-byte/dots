@@ -8,7 +8,7 @@ return {
   term = "wezterm",
   enable_wayland = true,
   colors = dracula,
-  window_background_opacity = 0.9,
+  window_background_opacity = 1.0,
   window_decorations = "NONE",
   default_cursor_style = "SteadyBlock",
   hide_tab_bar_if_only_one_tab = true,
