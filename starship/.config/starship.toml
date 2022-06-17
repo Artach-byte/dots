@@ -2,7 +2,7 @@
 add_newline = false
 
 format = """
-[┌─](white)$directory$time $git_branch$git_commit$git_state$git_status$python
+[┌─](white)$directory$time $git_branch$git_commit$git_state$git_status$python$cmd_duration
 [└──>](white) $username $character
 """
 
