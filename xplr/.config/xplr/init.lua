@@ -34,3 +34,56 @@ require("ouch").setup{
   mode = "action",
   key = "o",
 }
+
+----- dua-cli
+
+require("dua-cli").setup{
+  mode = "action",
+  key = "D",
+}
+
+xplr.config.modes.builtin.default.key_bindings.on_key.P = {
+  help = "preview",
+  messages = {
+    {
+      BashExecSilently = [===[
+        FIFO_PATH="/tmp/xplr.fifo"
+
+        if [ -e "$FIFO_PATH" ]; then
+          echo StopFifo >> "$XPLR_PIPE_MSG_IN"
+          rm "$FIFO_PATH"
+        else
+          mkfifo "$FIFO_PATH"
+          "$HOME/.local/bin/imv-open.sh" "$FIFO_PATH" "$XPLR_FOCUS_PATH" &
+          echo "StartFifo: '$FIFO_PATH'" >> "$XPLR_PIPE_MSG_IN"
+        fi
+      ]===],
+    },
+  },
+}
+
+local function stat(node)
+  return node.mime_essence
+end
+
+local function read(path, lines)
+  local out = ""
+  local p = io.open(path)
+
+  if p == nil then
+    return stat(path)
+  end
+
+  local i = 0
+  for line in p:lines() do
+    out = out .. line .. "\n"
+    if i == lines then
+      break
+    end
+    i = i + 1
+  end
+  p:close()
+
+  return out
+end
+
