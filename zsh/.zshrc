@@ -1,7 +1,7 @@
 # If not in tmux, start tmux.
-if [[ -z ${TMUX+X}${ZSH_SCRIPT+X}${ZSH_EXECUTION_STRING+X} ]]; then
-  exec tmux
-fi
+# if [[ -z ${TMUX+X}${ZSH_SCRIPT+X}${ZSH_EXECUTION_STRING+X} ]]; then
+#   exec tmux
+# fi
 
 function zcompile-many() {
   local f
@@ -39,8 +39,10 @@ source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/lf.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-# # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

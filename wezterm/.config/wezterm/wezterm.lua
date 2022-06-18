@@ -3,18 +3,24 @@ local wezterm = require 'wezterm';
 local dracula = require 'dracula';
 
 return {
-  font = wezterm.font("Caskaydia Cove Nerd Font", {font_size = 14.0 }),
+  font = wezterm.font({
+    family = "FuraCode Nerd Font Mono",
+    harfbuzz_features={"calt=1", "liga=1", "zero=1", "ss02=1"}
+  }),
+  font_size = 13.0,
+
+  font_antialias = "Subpixel",
   -- color_scheme = "nord",
   term = "wezterm",
   enable_wayland = true,
   colors = dracula,
   window_background_opacity = 1.0,
-  window_decorations = "NONE",
+ --[[  window_decorations = "NONE", ]]
   default_cursor_style = "SteadyBlock",
   hide_tab_bar_if_only_one_tab = true,
   tab_bar_at_bottom = true,
   use_fancy_tab_bar = true,
-  harfbuzz_features = {"zero"},
+ --[[  harfbuzz_features = {"zero"}, ]]
   scrollback_lines = 3500,
   keys = {
     {key="UpArrow", mods="SHIFT", action=wezterm.action{ScrollByLine=-1}},
