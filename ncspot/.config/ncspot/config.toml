@@ -13,6 +13,7 @@ album_column = true
 "s" = "shuffle"
 "z" = "save"
 "p" = "playpause"
+"s" = "search"
 
 # [theme]
 # primary = "light white"

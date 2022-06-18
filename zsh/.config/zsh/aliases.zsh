@@ -14,5 +14,6 @@ alias lg='lazygit'
 # back directory
 alias ..='cd ..'
 
-# Ranger
+# file Managers
 alias r='ranger'
+alias x='xplr'
