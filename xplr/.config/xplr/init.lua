@@ -19,6 +19,26 @@ local xplr = xplr -- The globally exposed configuration to be overridden.
 -- version = "0.0.0"
 -- ```
 
+local home = os.getenv("HOME")
+local xpm_path = home .. "/.local/share/xplr/dtomvan/xpm.xplr"
+local xpm_url = "https://github.com/dtomvan/xpm.xplr"
+
+package.path = package.path
+  .. ";"
+  .. xpm_path
+  .. "/?.lua;"
+  .. xpm_path
+  .. "/?/init.lua"
+
+os.execute(
+  string.format(
+    "[ -e '%s' ] || git clone '%s' '%s'",
+    xpm_path,
+    xpm_url,
+    xpm_path
+  )
+)
+
 -- # Configuration ------------------------------------------------------------
 --
 -- xplr can be configured using [Lua][1] via a special file named `init.lua`,
@@ -2603,7 +2623,8 @@ end
 -- `xplr.fn.custom.my_plugin.my_function` to define custom functions.
 xplr.fn.custom = {}
 
---## Plugins ------------------------------------------------------------------------------
+-- Plugins
+
 local home = os.getenv("HOME")
 package.path = home
 .. "/.config/xplr/plugins/?/init.lua;"
@@ -2614,6 +2635,17 @@ package.path = home
 -- Icons
 
 require"icons".setup()
+
+-- -- More Icons
+
+require('xpm').setup {
+  'dtomvan/xpm.xplr',
+  { 'dtomvan/extra-icons.xplr',
+      after = function()
+          xplr.config.general.table.row.cols[2] = { format = "custom.icons_dtomvan_col_1" }
+      end
+  },
+}
 
 -- Trash-Cli
 
