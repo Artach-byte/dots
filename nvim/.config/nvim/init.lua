@@ -9,7 +9,6 @@ require "user.treesitter"
 require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
---[[ require "user.evil_lualine" ]]
 require "user.nvim-tree"
 require "user.bufferline"
 require "user.toggleterm"
@@ -17,8 +16,9 @@ require "user.project"
 require "user.impatient"
 require "user.indentline"
 require "user.alpha"
---require "user.bubbles"
 --require "user.dracula"
 require "user.whichkey"
 require "user.autocommands"
 require "user.lualine"
+--[[ require "user.catppuccin" ]]
+

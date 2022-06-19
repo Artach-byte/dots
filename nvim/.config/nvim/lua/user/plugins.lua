@@ -59,7 +59,12 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
 
   -- Themes
-  use 'Mofiqul/dracula.nvim'
+  use 'shaunsingh/nord.nvim'
+  --[[ use 'Mofiqul/dracula.nvim' ]]
+ --  use({
+	-- "catppuccin/nvim",
+	-- as = "catppuccin"
+ --    })
   -- Lua line
   use {
     'nvim-lualine/lualine.nvim',

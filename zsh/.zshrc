@@ -1,7 +1,7 @@
 # If not in tmux, start tmux.
-# if [[ -z ${TMUX+X}${ZSH_SCRIPT+X}${ZSH_EXECUTION_STRING+X} ]]; then
-#   exec tmux
-# fi
+if [[ -z ${TMUX+X}${ZSH_SCRIPT+X}${ZSH_EXECUTION_STRING+X} ]]; then
+  exec tmux
+fi
 
 function zcompile-many() {
   local f
@@ -40,7 +40,6 @@ source ~/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/lf.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-
 
 #eval "$(starship init zsh)"
 

@@ -15,5 +15,5 @@ alias lg='lazygit'
 alias ..='cd ..'
 
 # file Managers
-alias r='ranger'
+# alias r='ranger'
 alias x='xplr'
