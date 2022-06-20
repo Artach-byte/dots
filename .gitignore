@@ -1,3 +1,4 @@
 *.log
 userstate.cbor
 /fzf
+/fish_variables
