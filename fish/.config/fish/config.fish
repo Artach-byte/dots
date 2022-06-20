@@ -1,7 +1,8 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     set -gx EDITOR nvim
-    # Aliases for LSD
+    set --universal pure_color_system_time pure_color_mute 
+  # Aliases for LSD
     alias ls='lsd'
     alias l='ls -l'
     alias la='ls -a'
