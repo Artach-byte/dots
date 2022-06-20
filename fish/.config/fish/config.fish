@@ -13,4 +13,6 @@ if status is-interactive
     alias ..='cd ..'
     # file Managers
     alias x='xplr'
+    # exa
+    alias exa='exa --long --header --git'
 end
