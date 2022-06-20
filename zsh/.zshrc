@@ -1,7 +1,7 @@
 # If not in tmux, start tmux.
-# if [[ -z ${TMUX+X}${ZSH_SCRIPT+X}${ZSH_EXECUTION_STRING+X} ]]; then
-#   exec tmux
-# fi
+if [[ -z ${TMUX+X}${ZSH_SCRIPT+X}${ZSH_EXECUTION_STRING+X} ]]; then
+  exec tmux
+fi
 
 function zcompile-many() {
   local f
