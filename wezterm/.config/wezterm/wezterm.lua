@@ -1,56 +1,24 @@
 local wezterm = require 'wezterm';
 
-local dracula = require 'dracula';
-
 return {
-  font = wezterm.font("Caskaydia Cove Nerd Font"),
-  font_size = 13.0,
-
-  font_antialias = "Subpixel",
-  -- color_scheme = "nord",
-  term = "wezterm",
-  enable_wayland = true,
-  colors = dracula,
-  window_background_opacity = 1.0,
-  window_decorations = "NONE",
-  default_cursor_style = "SteadyBlock",
-  hide_tab_bar_if_only_one_tab = true,
-  tab_bar_at_bottom = true,
-  use_fancy_tab_bar = true,
- --[[  harfbuzz_features = {"zero"}, ]]
-  scrollback_lines = 3500,
-  keys = {
-    {key="UpArrow", mods="SHIFT", action=wezterm.action{ScrollByLine=-1}},
-    {key="DownArrow", mods="SHIFT", action=wezterm.action{ScrollByLine=1}},
-  },
-  check_for_updates = true,
-  check_for_updates_interval_seconds = 86400,
-  hyperlink_rules = {
-    -- Linkify things that look like URLs
-    -- This is actually the default if you don't specify any hyperlink_rules
-    {
-      regex = "\\b\\w+://(?:[\\w.-]+)\\.[a-z]{2,15}\\S*\\b",
-      format = "$0",
-    },
-
-    -- linkify email addresses
-    {
-      regex = "\\b\\w+@[\\w-]+(\\.[\\w-]+)+\\b",
-      format = "mailto:$0",
-    },
-
-    -- file:// URI
-    {
-      regex = "\\bfile://\\S*\\b",
-      format = "$0",
-    },
-
-    -- Make task numbers clickable
-    --[[
-    {
-      regex = "\\b[tT](\\d+)\\b"
-      format = "https://example.com/tasks/?t=$1"
-    }
-    ]]
-  }
-  }
+    allow_square_glyphs_to_overflow_width = "WhenFollowedBySpace",
+    audible_bell = "Disabled",
+    automatically_reload_config = true,
+    bold_brightens_ansi_colors = false,
+    canonicalize_pasted_newlines = "LineFeed",
+    check_for_updates = false,
+    color_scheme = "nord",
+    default_cursor_style = "BlinkingBar",
+    exit_behavior = "Close",
+    font = wezterm.font("FiraCode Nerd Font"),
+    font_size = 11,
+    hide_tab_bar_if_only_one_tab = true,
+    -- desaturate inactive panes
+    window_background_opacity = 0.95,
+    window_decorations = "NONE",
+    window_padding = {
+        left = 0,
+        right = 0,
+        top = 0,
+        bottom = 0
+    } }
