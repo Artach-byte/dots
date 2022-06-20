@@ -16,9 +16,6 @@ require "user.project"
 require "user.impatient"
 require "user.indentline"
 require "user.alpha"
---require "user.dracula"
 require "user.whichkey"
 require "user.autocommands"
 require "user.lualine"
---[[ require "user.catppuccin" ]]
-
