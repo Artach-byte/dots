@@ -1,7 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     set -gx EDITOR nvim
-    set --universal pure_color_system_time pure_color_mute 
+    set --universal pure_color_system_time pure_color_mute
     set -g async_prompt_functions _pure_prompt_git
   # Aliases for LSD
     alias ls='lsd'
