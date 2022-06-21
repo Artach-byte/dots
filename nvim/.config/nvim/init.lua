@@ -22,4 +22,5 @@ require "user.lualine"
 
 -- alllow for opacity in wezterm
 vim.cmd [[hi Normal guibg=none]]
+vim.cmd [[set colorcolumn=80]]
 
