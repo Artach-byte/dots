@@ -20,6 +20,6 @@ require "user.whichkey"
 require "user.autocommands"
 require "user.lualine"
 
-
+-- alllow for opacity in wezterm
 vim.cmd [[hi Normal guibg=none]]
 
