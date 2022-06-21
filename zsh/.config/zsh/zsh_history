@@ -284,3 +284,95 @@ paru
 clear
 clear
 nvim .zshrc
+clear
+z zsh
+clear
+cd dots/zsh/
+la
+clear
+z zsh
+touch .zshenv
+nvim .zshenv
+clear
+zshreload
+clear
+x
+clear
+nvim .zshrc
+zshreload
+clear
+cd dots
+clear
+git status
+git add .
+git revert
+clear
+git status
+git restore --staged zsh/.config/zsh/zsh_history
+git status
+nvim .gitignore
+git add .
+git status
+nvim .gitignore
+git add .
+clear
+git status
+run-help git
+git commit -m 'removed p10k&zoxide from zshrc'
+git push
+clear
+git clone https://github.com/agkozak/zsh-z.git ~/dots/zsh/.config/zsh/plugins/zsh-z
+x
+clear
+git add .
+git status
+x
+x
+clear
+git add .
+git status
+clear
+x
+nvim 
+clear
+zshreload
+clear
+git status
+git add .
+git commit -m 'added zsh-z to zshrc'
+git push
+clear
+fish
+clear
+paru -Rns fish
+clear
+clear
+cd dots/nvim/.config/nvim
+z nvim
+clear
+dc
+clear
+cd Repos
+rm -rf dots
+clear
+cd dots/wezterm/.config/wezterm
+clear
+z wezterm
+clear
+clear
+clear
+clear
+z wezterm
+cler
+clear
+sl
+clear
+clear
+ zsh
+x
+clear
+cd dots
+stow */
+zshreload
+clear
+x
