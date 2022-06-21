@@ -94,7 +94,7 @@ xplr.config.general.enable_mouse = false
 -- Set it to `true` to show hidden files by default.
 --
 -- Type: boolean
-xplr.config.general.show_hidden = false
+xplr.config.general.show_hidden = true
 
 -- Set it to `true` to use only a subset of selected operations that forbids
 -- executing commands or performing write operations on the file-system.

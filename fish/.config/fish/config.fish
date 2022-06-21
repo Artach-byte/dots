@@ -14,5 +14,5 @@ if status is-interactive
     # file Managers
     alias x='xplr'
     # exa
-    alias exa='exa --long --header --git'
+    alias exa='exa --long --header --git --all'
 end
