@@ -1,0 +1,16 @@
+[user]
+	name = Joseph Hansen
+	email = Joseph.hansen.96@gmail.com
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[core]
+	editor = nvim
+	excludesFile = /home/joe/.gitignore
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

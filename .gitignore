@@ -2,3 +2,4 @@
 userstate.cbor
 /fzf
 fish/.config/fish/fish_variables
+ranger/.config/ranger/plugins/__pycache__

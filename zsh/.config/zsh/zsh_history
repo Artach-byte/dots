@@ -1,0 +1,147 @@
+cleasr
+clear
+htop
+zplr
+xplr
+clear
+clear
+x
+clear
+git clone https://github.com/Aloxaf/fzf-tab.git ~/.config/zsh/plugins/fzf-tab
+clear
+clear
+n
+clear
+git clone https://github.com/ajeetdsouza/zoxide.git ~/.config/zsh/plugins/zoxide
+clear
+nvim .zshrc
+zshreload
+nvim .zshrc
+zshreload
+clear
+nvim .zshrc
+clear
+clear
+cd doclear
+clear
+clear
+cd clear
+celar
+clear
+clear
+nvim .zshrc
+zshreload
+clear
+clear
+clear
+nvim .zshrc 
+zshreload
+clear
+clear
+clear
+nvim .zshrc
+zshreload
+clear
+clear
+htop
+clear
+nvim .zshrcc
+nvim .zshrc
+zshreload
+clear
+exa
+clear
+cd - dots
+clear
+cd dots
+clear
+clear
+nvim .zshrc
+zshreload
+clear
+clear
+clear
+nvim .zshrc
+zshreload
+rm ~/.zcompdump*; compinit
+clear
+zshreload
+clear
+cd dots/nvim/.config/nvim
+clear
+z nvim
+clear
+clear
+clear
+clear
+nvim .zshrc
+zshreload
+clear
+clear
+nvim .zshrc
+zshreload
+clear
+cd .config/zsh
+nvim aliases.zsh
+zshreload
+exa
+cleae
+clear
+clear
+nvim .zshrc
+zshreload
+clear
+clear
+exot
+clear
+clear
+nvim .zshrc
+zshreload
+clear
+nvim .zshrc
+zshreload
+nvim .zshrc
+zshreload
+nvim .zshrc
+zshreload
+nvim .zshrc
+zshreload
+clear
+nvim .zshrc
+zshreload
+clera
+clear
+clear
+cd Repos
+clear
+x
+lcear
+clear
+cd Repos
+cd Repos
+git clone https://github.com/Artach-byte/nord-fzf.git
+run-help git
+git clone  https://github.com/Artach-byte/nord-fzf.git
+clear
+cd nord-fzf
+nvim README.md
+git add .
+nvim README.md
+clear
+rm -rf nord-fzf
+git clone  https://github.com/Artach-byte/nord-fzf.git
+cd nord-fzf
+git checkout -b add-bg-for-wezterm
+clear
+nvim README.md
+clear
+git add .
+git commit -m 'added bg color for wezterm'
+git push
+git push --set-upstream origin add-bg-for-wezterm
+clear
+clear
+clea
+clear
+tmux
+pkill tmux

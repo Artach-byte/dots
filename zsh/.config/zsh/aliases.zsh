@@ -15,5 +15,7 @@ alias lg='lazygit'
 alias ..='cd ..'
 
 # file Managers
-# alias r='ranger'
 alias x='xplr'
+
+# exa
+alias exa='exa --long --header --git --all'

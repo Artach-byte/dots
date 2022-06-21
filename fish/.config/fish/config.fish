@@ -16,3 +16,7 @@ if status is-interactive
     # exa
     alias exa='exa --long --header --git --all'
 end
+
+# Generated for envman. Do not edit.
+test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
+
