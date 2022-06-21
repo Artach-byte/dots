@@ -19,3 +19,7 @@ require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
 require "user.lualine"
+
+
+vim.cmd [[hi Normal guibg=none]]
+
