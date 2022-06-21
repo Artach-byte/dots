@@ -41,6 +41,7 @@ source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.config/zsh/plugins/zsh-autopair/zsh-autopair.plugin.zsh
 source ~/.config/zsh/plugins/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
 source ~/.config/zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
+source ~/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 
 # Must be last
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
