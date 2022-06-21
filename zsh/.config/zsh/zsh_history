@@ -145,3 +145,142 @@ clea
 clear
 tmux
 pkill tmux
+clear
+clear
+clear
+nvim .zshrc
+zshreload
+clear
+cd .config/zsh
+x
+clear
+cd plugins/zsh-autopair
+paru ranger
+clear
+r
+clear
+ranger
+la
+clear
+cd .config
+mv zsh ~/dots/zsh/.config
+cd dots
+mkdir zsh/.config
+mkdir -p zsh/.config
+clear
+x
+clera
+cd 
+cd .config
+mv zsh ~/dots/zsh/.config
+sl
+ckear
+clear
+clear
+mv .zshrc ~/dots/zsh
+clear
+cd dots
+clear
+cd zsh
+la
+exa
+celar
+cleasr
+clear
+cd dots
+stow */
+clera
+clear
+zshreload
+clear
+clear
+nvim .zsheve
+clear
+cd dots
+git status
+cd ranger/.config/ranger/plugins
+cd __pycache__
+clear
+cd dots
+nvim .gitignore
+git status
+cleasr
+clear
+git add .
+clear
+x
+clear
+git add .
+git status
+git commit -m 'reconfiged zsh'
+clear
+ranger
+clear
+git push
+clear
+clear
+cd zsh/.config/zsh
+cd plugins
+cd zsh-autopair
+rm -rf .git
+clear
+cd dots
+git add .
+git push
+clear
+z autopair
+rm -rf zsh-autopair
+clear
+clear
+git clone https://github.com/hlissner/zsh-autopair.git ~/dots/zsh/.config/zsh/plugins/zsh-autopair
+clear
+z autopair
+rm -rf .git
+clear
+clear
+git add zsh
+cd dots
+git add zsh
+clear
+clear
+cd Repos
+git clone https://github.com/Artach-byte/dots.git
+clear
+cd dots
+cd zsh/.config/zsh
+cd plugins/zsh-autopair
+la
+clear
+cd dots
+cd zsh/.config/zsh
+cd plugins
+rm -rf zsh-autopair
+clear
+git add .
+git commit -m 'removed autopair '
+git push
+clear
+git clone https://github.com/hlissner/zsh-autopair.git ~/dots/zsh/.config/zsh/plugins/zsh-autopair
+cd zsh-autopair
+rm -rf .git
+clear
+z dots
+clear
+git add .
+git commit -m 'readded autopair for zsh'
+git puch
+git push
+clear
+x
+clear
+stow */
+x
+clear
+clear
+which zsh
+chsh -s /usr/bin/zsh
+clear
+paru 
+clear
+clear
+nvim .zshrc
