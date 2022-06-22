@@ -3,4 +3,4 @@ userstate.cbor
 /fzf
 fish/.config/fish/fish_variables
 ranger/.config/ranger/plugins/__pycache__
-zsh/.config/zsh/zsh_history
+zsh_history
