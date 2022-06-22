@@ -12,7 +12,7 @@ return {
     default_cursor_style = "BlinkingBar",
     exit_behavior = "Close",
     font = wezterm.font({
-    "FiraCode Nerd Font",
+    "JetBrainsMono Nerd Font",
     harfbuzz_features={"calt=1", "clig=1", "liga=1"}
   }),
     font_antialias = "Subpixel",
