@@ -53,4 +53,3 @@ format = "[$duration]($style) "
 
 [python]
 format = "[$virtualenv]($style) "
-
