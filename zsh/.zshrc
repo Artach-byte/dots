@@ -25,18 +25,18 @@ autoload -Uz compinit && compinit
 unfunction zcompile-many
 
 # Nord theme for fzf in wezterm
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    --color=fg:#e5e9f0,bg:#323844,hl:#81a1c1
-    --color=fg+:#e5e9f0,bg+:#323844,hl+:#81a1c1
-    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
-    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
-
-# Nord theme for fzf in kitty
 # export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-#     --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
-#     --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
+#     --color=fg:#e5e9f0,bg:#323844,hl:#81a1c1
+#     --color=fg+:#e5e9f0,bg+:#323844,hl+:#81a1c1
 #     --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
 #     --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
+
+# Nord theme for fzf in kitty
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
+    --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
+    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
+    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
 
 # Alias config
 source ~/.config/zsh/aliases.zsh
@@ -46,7 +46,6 @@ source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.config/zsh/plugins/zsh-autopair/zsh-autopair.plugin.zsh
 source ~/.config/zsh/plugins/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
-source ~/.config/zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
 source ~/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 

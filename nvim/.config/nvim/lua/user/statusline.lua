@@ -155,7 +155,7 @@ M.LSP_status = function()
          table.insert(names, client.name)
       end
    end
-  
+
    local name = false
    if names ~= {} then
       name = table.concat(names, '|')
