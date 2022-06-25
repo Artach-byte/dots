@@ -4,3 +4,4 @@ userstate.cbor
 fish/.config/fish/fish_variables
 ranger/.config/ranger/plugins/__pycache__
 zsh_history
+.directory

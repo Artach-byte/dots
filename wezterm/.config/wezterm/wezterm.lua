@@ -11,10 +11,7 @@ return {
     color_scheme = "nord",
     default_cursor_style = "BlinkingBar",
     exit_behavior = "Close",
-    font = wezterm.font({
-    "JetBrainsMono Nerd Font",
-    harfbuzz_features={"calt=1", "clig=1", "liga=1"}
-  }),
+    font = wezterm.font("JetBrainsMono Nerd Font"),
     font_antialias = "Subpixel",
     font_size = 11,
     hide_tab_bar_if_only_one_tab = true,
