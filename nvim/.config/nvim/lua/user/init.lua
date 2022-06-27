@@ -17,10 +17,6 @@ local config = {
     -- },
   },
 
-
--- alllow for opacity in wezterm
-vim.cmd [[hi Normal guibg=none]],
-
   -- Set colorscheme
   colorscheme = "nord",
 
@@ -230,6 +226,7 @@ vim.cmd [[hi Normal guibg=none]],
   polish = function()
     -- Set key binding
     -- Set autocommands
+    vim.cmd [[hi Normal guibg=none]] -- Allows for opacity in wezterm
     vim.api.nvim_create_augroup("packer_conf", { clear = true })
     vim.api.nvim_create_autocmd("BufWritePost", {
       desc = "Sync packer after modifying plugins.lua",
