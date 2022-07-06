@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm';
+local dracula = require 'dracula';
 
 return {
     allow_square_glyphs_to_overflow_width = "WhenFollowedBySpace",
@@ -8,7 +9,8 @@ return {
     bold_brightens_ansi_colors = false,
     canonicalize_pasted_newlines = "LineFeed",
     check_for_updates = false,
-    color_scheme = "nord",
+    colors=dracula, 
+    -- color_scheme = "nord",
     default_cursor_style = "BlinkingBar",
     exit_behavior = "Close",
     font = wezterm.font("JetBrainsMono Nerd Font"),
