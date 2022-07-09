@@ -20,4 +20,4 @@ alias r='ranger'
 
 
 # exa
-alias exa='exa --long --header --git --all'
+alias exa='exa --long --header --git --all --icons --grid'
