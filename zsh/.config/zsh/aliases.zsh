@@ -16,8 +16,6 @@ alias ..='cd ..'
 
 # file Managers
 alias x='xplr'
-alias r='ranger'
-
 
 # exa
 alias exa='exa --long --header --git --all --icons --grid'
