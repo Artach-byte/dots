@@ -42,6 +42,7 @@ source ~/.config/zsh/plugins/zsh-autopair/zsh-autopair.plugin.zsh
 source ~/.config/zsh/plugins/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
 source ~/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 source ~/.config/zsh/plugins/zsh-colored-man-pages/colored-man-pages.plugin.zsh
+source ~/.config/zsh/plugins/zsh-github-cli/cli.plugin.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Must be last
