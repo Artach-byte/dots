@@ -17,5 +17,8 @@ alias ..='cd ..'
 # file Managers
 alias x='xplr'
 
+# vscodium
+alias code='codium'
+
 # exa
 # alias exa='exa --long --header --git --all --icons --grid'
