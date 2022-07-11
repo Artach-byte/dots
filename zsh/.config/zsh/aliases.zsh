@@ -1,10 +1,10 @@
 # Aliases for LSD
-alias ls='lsd'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
-
+# alias ls='lsd'
+# alias l='ls -l'
+# alias la='ls -a'
+# alias lla='ls -la'
+# alias lt='ls --tree'
+#
 # Aliases for ZSH
 alias zshreload='source ~/.zshrc'             # reload ZSH
 
@@ -18,4 +18,4 @@ alias ..='cd ..'
 alias x='xplr'
 
 # exa
-alias exa='exa --long --header --git --all --icons --grid'
+# alias exa='exa --long --header --git --all --icons --grid'
