@@ -2,20 +2,16 @@
 add_newline = false
 
 format = """
-[┌─](white)$directory$time $git_branch$git_commit$git_state$git_status$python$cmd_duration
+[┌─](white)$directory$time $git_branch$git_commit$git_state$git_status$package$cmake$dart$dotnet$premake$golang$java$kotlin$nodejs$perl$php$python$ruby$rust
 [└──>](white) $username $character
 """
 
-# format = """
-# [┌─](white)$directory$time $git_branch$git_commit$git_state$git_status$package$cmake$dart$dotnet$premake$golang$java$kotlin$nodejs$perl$php$python$ruby$rust
-# [└──>](white) $username $character
-# """
-
-
 [character]
-success_symbol = "[](green)"
-error_symbol = "[](red)"
-vicmd_symbol = "[](yellow)"
+# success_symbol = "[>](green)[>](bold blue)[>](green)"
+# error_symbol = "[>](red)[>](bold yellow)[>](red)"
+success_symbol = "[](green)"
+error_symbol = "[](red)"
+
 
 [directory]
 truncation_length = 32
@@ -31,25 +27,72 @@ style_user = "white bold"
 style_root = "yellow bold"
 format = "[λ]($style) [|](bold blue)"
 
+[aws]
+symbol = "  "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
 [git_branch]
-format = "[$branch]($style)"
+symbol = " "
 
-[git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
-style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "≡"
+[golang]
+symbol = " "
 
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
+[hg_branch]
+symbol = " "
 
-[cmd_duration]
-format = "[$duration]($style) "
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
 
 [python]
-format = "[$virtualenv]($style) "
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[shlvl]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
+
