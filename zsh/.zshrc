@@ -32,25 +32,46 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
 
 
-# Alias config
-source ~/.config/zsh/aliases.zsh
+################################################################################
+#                                 Plugins Start                                #
+################################################################################
 
-# Plugins
+## MUST BE FIRST PLUGIN: fzf tab plugin -> https://github.com/Aloxaf/fzf-tab
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+
+## zsh-autosuggestions -> https://github.com/zsh-users/zsh-autosuggestions
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+
+## zsh-autopair -> https://github.com/hlissner/zsh-autopair
 source ~/.config/zsh/plugins/zsh-autopair/zsh-autopair.plugin.zsh
+
+## zsh-fzf-history-search -> https://github.com/joshskidmore/zsh-fzf-history-search
 source ~/.config/zsh/plugins/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
+
+## zsh-z -> https://github.com/agkozak/zsh-z
 source ~/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh
+
+## colored-man-pages -> https://github.com/ael-code/zsh-colored-man-pages
 source ~/.config/zsh/plugins/zsh-colored-man-pages/colored-man-pages.plugin.zsh
+
+## completion for gh-cli -> https://github.com/sudosubin/zsh-github-cli
 source ~/.config/zsh/plugins/zsh-github-cli/cli.plugin.zsh
+
+## zsh-exa -> https://github.com/TwoPizza9621536/zsh-exa
 source ~/.config/zsh/plugins/zsh-exa/zsh-exa.plugin.zsh
+
+## theme for zsh -> https://github.com/romkatv/powerlevel10k
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-# Must be last
+## Alias config
+source ~/.config/zsh/aliases.zsh
+
+## MUST BE LAST PLUGIN: syntax highlighting -> https://github.com/zsh-users/zsh-syntax-highlighting
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+################################################################################
+#                              Plugins End                                     #
+################################################################################
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
