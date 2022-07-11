@@ -7,10 +7,18 @@
 	ui = auto
 [core]
 	editor = nvim
-	excludesFile = /home/joe/.gitignore
+  excludesFile = /home/joe/.gitignore
+  pager = delta
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper = !/usr/bin/gh auth git-credential
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  side-by-side = true
+  line-numbers-left-format = ""
+  line-numbers-right-format = "│ "
+  syntax-theme = Nord
