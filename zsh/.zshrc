@@ -25,8 +25,6 @@ setopt AUTO_CD # Go to folder path without using cd.
 setopt AUTO_NAME_DIRS # Any parameter that is set to the absolute name of a directory immediately becomes a name for that directory
 setopt AUTO_PUSHD # Push the old directory onto the stack on cd.
 setopt CDABLE_VARS # Change directory to a path stored in a variable.
-setopt CORRECT # Spelling correction
-setopt CORRECTALL
 setopt EXTENDED_GLOB  # Use extended globbing syntax.
 setopt GLOB_DOTS # Do not require a leading ‘.’ in a filename to be matched explicitly.
 setopt INTERACTIVE_COMMENTS # Allow comments even in interactive shells
