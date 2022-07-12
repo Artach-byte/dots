@@ -2632,60 +2632,32 @@ package.path = home
 .. "/.config/xplr/plugins/?.lua;"
 .. package.path
 
--- Icons
 
-require"icons".setup()
+-- More Icons
 
--- -- More Icons
-
-require('xpm').setup {
-  'dtomvan/xpm.xplr',
+require("xpm").setup({
+  plugins = {
+    -- Let xpm manage itself
+    'dtomvan/xpm.xplr',
+    { name = 'sayanarijit/fzf.xplr' },
+      'dtomvan/xpm.xplr',
   { 'dtomvan/extra-icons.xplr',
       after = function()
           xplr.config.general.table.row.cols[2] = { format = "custom.icons_dtomvan_col_1" }
       end
   },
-}
-
--- Trash-Cli
-
-require("trash-cli").setup{
-  trash_mode = "delete",
-  trash_key = "d",
-  restore_mode = "delete",
-  restore_key = "r",
-  trash_list_selector = "fzf -m | cut -d' ' -f3-"
-}
-
--- Ouch
-require("ouch").setup{
-  mode = "action",
-  key = "o",
-}
-
--- dua-cli
-
-require("dua-cli").setup{
-  mode = "action",
-  key = "D",
-}
-
-xplr.config.modes.builtin.default.key_bindings.on_key.P = {
-  help = "preview",
-  messages = {
-    {
-      BashExecSilently = [===[
-        FIFO_PATH="/tmp/xplr.fifo"
-
-        if [ -e "$FIFO_PATH" ]; then
-          echo StopFifo >> "$XPLR_PIPE_MSG_IN"
-          rm "$FIFO_PATH"
-        else
-          mkfifo "$FIFO_PATH"
-          "$HOME/.local/bin/imv-open.sh" "$FIFO_PATH" "$XPLR_FOCUS_PATH" &
-          echo "StartFifo: '$FIFO_PATH'" >> "$XPLR_PIPE_MSG_IN"
-        fi
-      ]===],
-    },
+    'prncss-xyz/icons.xplr',
+    'sayanarijit/trash-cli.xplr',
+    'sayanarijit/dua-cli.xplr',
+    'sayanarijit/fzf.xplr',
+    'sayanarijit/zentable.xplr',
+    'igorepst/term.xplr'
   },
-}
+  auto_install = true,
+  auto_cleanup = true,
+})
+
+local term = require('term')
+local k_hsplit = term.profile_tmux_hsplit()
+k_hsplit.key = 'ctrl-h'
+term.setup({term.profile_tmux_vsplit(), k_hsplit})
