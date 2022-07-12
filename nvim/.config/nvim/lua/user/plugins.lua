@@ -99,6 +99,9 @@ return packer.startup(function(use)
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
   use {'mfussenegger/nvim-dap-python'}
 
+  -- Colorizer
+  use {'norcalli/nvim-colorizer.lua'}
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
