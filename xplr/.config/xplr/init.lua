@@ -2651,7 +2651,8 @@ require("xpm").setup({
     'sayanarijit/dua-cli.xplr',
     'sayanarijit/fzf.xplr',
     'sayanarijit/zentable.xplr',
-    'igorepst/term.xplr'
+    'igorepst/term.xplr',
+    'sayanarijit/wl-clipboard.xplr'
   },
   auto_install = true,
   auto_cleanup = true,
