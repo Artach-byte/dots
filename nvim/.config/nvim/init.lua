@@ -20,6 +20,7 @@ require "user.indentline"
 require "user.alpha"
 require "user.lsp"
 require "user.dap"
+require 'user.colorizer'
 
 -- alllow for opacity in wezterm
 vim.cmd [[hi Normal guibg=none]]
