@@ -87,6 +87,7 @@ return packer.startup(function(use)
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter" }
+  use {'p00f/nvim-ts-rainbow'}
 
   -- Git
   use { "lewis6991/gitsigns.nvim" }
