@@ -44,7 +44,7 @@ wezterm.on(
 )
 
 return {
-  window_decorations           = "NONE",
+ --[[  window_decorations           = "NONE", ]]
   enable_wayland               = true,
   --color_scheme                 ="nord",
   colors                       = dracula,
