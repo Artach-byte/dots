@@ -50,11 +50,21 @@ autoload -Uz compinit
 compinit
 
 # Nord theme for fzf
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    --color=fg:#e5e9f0,bg:#323844,hl:#81a1c1
-    --color=fg+:#e5e9f0,bg+:#323844,hl+:#81a1c1
-    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
-    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+#     --color=fg:#e5e9f0,bg:#323844,hl:#81a1c1
+#     --color=fg+:#e5e9f0,bg+:#323844,hl+:#81a1c1
+#     --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
+#     --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
+
+# # Catppuccin theme for fzf
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+# --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+# --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+# Dracula Theme for fzf
+export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+
 
 ## Alias config
 source ~/.config/zsh/aliases.zsh
