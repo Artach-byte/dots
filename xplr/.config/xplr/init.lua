@@ -2650,7 +2650,7 @@ require("xpm").setup({
     'sayanarijit/trash-cli.xplr',
     'sayanarijit/dua-cli.xplr',
     'sayanarijit/fzf.xplr',
-    --[[ 'sayanarijit/zentable.xplr', ]]
+    'sayanarijit/zentable.xplr',
     'igorepst/term.xplr',
     'sayanarijit/wl-clipboard.xplr'
   },
