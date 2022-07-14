@@ -15,6 +15,9 @@ nvim_tree.setup {
     enable = true,
     update_cwd = true,
   },
+
+  open_on_setup = true,
+
   renderer = {
     root_folder_modifier = ":t",
     icons = {
@@ -54,9 +57,10 @@ nvim_tree.setup {
     },
   },
   view = {
+    adaptive_size = true,
     width = 30,
     height = 30,
-    side = "left",
+    side = "right",
     mappings = {
       list = {
         { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
