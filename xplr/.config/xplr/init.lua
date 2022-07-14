@@ -2623,6 +2623,26 @@ end
 -- `xplr.fn.custom.my_plugin.my_function` to define custom functions.
 xplr.fn.custom = {}
 
+xplr.config.modes.builtin.default.key_bindings.on_key.P = {
+  help = "preview",
+  messages = {
+    {
+      BashExecSilently = [===[
+        FIFO_PATH="/tmp/xplr.fifo"
+
+        if [ -e "$FIFO_PATH" ]; then
+          echo StopFifo >> "$XPLR_PIPE_MSG_IN"
+          rm "$FIFO_PATH"
+        else
+          mkfifo "$FIFO_PATH"
+          "$HOME/.local/bin/imv-open.sh" "$FIFO_PATH" "$XPLR_FOCUS_PATH" &
+          echo "StartFifo: '$FIFO_PATH'" >> "$XPLR_PIPE_MSG_IN"
+        fi
+      ]===],
+    },
+  },
+}
+
 -- Plugins
 
 local home = os.getenv("HOME")
@@ -2633,7 +2653,7 @@ package.path = home
 .. package.path
 
 
--- More Icons
+-- xpm
 
 require("xpm").setup({
   plugins = {
@@ -2652,7 +2672,8 @@ require("xpm").setup({
     'sayanarijit/fzf.xplr',
     'sayanarijit/zentable.xplr',
     'igorepst/term.xplr',
-    'sayanarijit/wl-clipboard.xplr'
+    'sayanarijit/wl-clipboard.xplr',
+    'sayanarijit/dragon.xplr'
   },
   auto_install = true,
   auto_cleanup = true,
