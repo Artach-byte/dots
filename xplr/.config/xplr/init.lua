@@ -2673,7 +2673,8 @@ require("xpm").setup({
     'sayanarijit/zentable.xplr',
     'igorepst/term.xplr',
     'sayanarijit/wl-clipboard.xplr',
-    'sayanarijit/dragon.xplr'
+    'sayanarijit/dragon.xplr',
+    'dtomvan/ouch.xplr'
   },
   auto_install = true,
   auto_cleanup = true,
