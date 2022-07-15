@@ -15,9 +15,11 @@ album_column = true
 "p" = "playpause"
 "s" = "search"
 
-# [theme]
-background = "default"
-# background = "black"
+
+
+[theme]
+# background = "default"
+background = "black"
 primary = "#F8F8F2"
 secondary = "light black"
 title = "#bd93f9"
