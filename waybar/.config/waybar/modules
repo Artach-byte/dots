@@ -192,7 +192,7 @@
     },
 
         "custom/pacman": {
-        "format": "<big></big> {}",
+        "format": "<big></big> {}",
         "interval": 15,                     // every hour
         "exec": "checkupdates | wc -l",       // # of updates
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
@@ -217,7 +217,7 @@
 	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
 	"format": "",
 	"format-disabled": "", // an empty format will hide the module
-	"format-connected": " {num_connections} connected",
+	"format-connected": "  {num_connections} connected",
 	"tooltip-format": "{controller_alias}\t{controller_address}",
 	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
 	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"

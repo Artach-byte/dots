@@ -1,6 +1,6 @@
 * {
 	font-size: 15px;
-	font-family: monospace;
+	font-family: JetBrainsMono Nerd Font;
 }
 
 window#waybar {
@@ -33,6 +33,7 @@ window#waybar {
 #bluetooth,
 #tray {
 	background: #44475a;
+  padding: 0 0.6em;
 }
 
 #workspaces button {
@@ -51,7 +52,6 @@ window#waybar {
 	border: #282a36;
 	padding: 0 3px;
 }
-
 #pulseaudio {
 	color: #8be9fd;
 }
@@ -71,16 +71,10 @@ window#waybar {
 #disk {
 	color: #b58900;
 }
-
 #custom-pacman {
     font-weight: bold;
     padding: 0 0.6em;
 }
-
-#tray {
-  padding: 0 0.6em;
-}
-
 #temperature {
     background-color:#44475a; 
     color: #bd93f9 
