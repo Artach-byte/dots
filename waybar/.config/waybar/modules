@@ -51,12 +51,12 @@
 
     "cpu": {
         "interval": 5,
-        "format": "  {usage}% ({load})", // Icon: microchip
+        "format": " {usage}%", // Icon: microchip
         "states": {
             "warning": 70,
             "critical": 90,
         },
-        "on-click": "xfce4-terminal -e 'htop'",
+        "on-click": "kitty -e 'htop'",
     },
 
     "custom/keyboard-layout": {
@@ -79,23 +79,7 @@
             "critical": 90
         }
     },
-
-    "network": {
-        "interval": 5,
-        "format-wifi": " ", // Icon: wifi
-        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
-        "format-disconnected": "⚠  Disconnected",
-        /* "tooltip-format": "{ifname}: {ipaddr}", */
-        "tooltip-format": "{essid} ({signalStrength}%): {ipaddr}",
-        "on-click": "xfce4-terminal -e 'nmtui'",
-    },
-    "network#vpn": {
-        "interface": "tun0",
-        "format": "  {essid} ({signalStrength}%)",
-        "format-disconnected": "⚠  Disconnected",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-    },
-
+    
     "sway/mode": {
         "format": "{}",
         "tooltip": false
@@ -123,7 +107,7 @@
         "format-icons": {
             "1": "",
             "2": "",
-            "3": "",
+            "3": "",
             "4": "",
             "5": "",
         }
@@ -160,8 +144,8 @@
     },
 
     "tray": {
-        "icon-size": 18,
-        "spacing":10,
+        "icon-size": 15,
+        "spacing":5,
      },
 
     "backlight#icon": {
@@ -206,4 +190,36 @@
         "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
         "tooltip": false,
     },
+
+        "custom/pacman": {
+        "format": "<big></big> {}",
+        "interval": 15,                     // every hour
+        "exec": "checkupdates | wc -l",       // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        "on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8,
+        "max-length": 5,
+        "min-length": 3
+    },
+
+    "temperature": {
+        //"thermal-zone": 1,
+        "interval": "4",
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 74,
+        "format": "{icon} {temperatureC}°C ",
+        "format-icons": ["", "", ""],
+        "max-length": 7,
+        "min-length": 7
+    },
+
+"bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	"format": "",
+	"format-disabled": "", // an empty format will hide the module
+	"format-connected": " {num_connections} connected",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+}
   }

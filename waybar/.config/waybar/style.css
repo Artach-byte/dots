@@ -28,6 +28,9 @@ window#waybar {
 #battery,
 #disk,
 #idle_inhibitor,
+#custom-pacman,
+#temperature,
+#bluetooth,
 #tray {
 	background: #44475a;
 }
@@ -52,6 +55,10 @@ window#waybar {
 #pulseaudio {
 	color: #8be9fd;
 }
+#bluetooth {
+	color: #8be9fd;
+  padding: 0 0.6em;
+}
 #memory {
 	color: #50fa7b;
 }
@@ -63,6 +70,23 @@ window#waybar {
 }
 #disk {
 	color: #b58900;
+}
+
+#custom-pacman {
+    font-weight: bold;
+    padding: 0 0.6em;
+}
+
+#tray {
+  padding: 0 0.6em;
+}
+
+#temperature {
+    background-color:#44475a; 
+    color: #bd93f9 
+}
+#temperature.critical {
+    background: #ff5555;
 }
 
 #clock,
