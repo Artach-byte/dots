@@ -18,6 +18,11 @@ window#waybar {
 	background: #44475a;
 }
 
+tooltip {
+  background: #282a36;
+  border: 1px solid #bd93f9;
+}
+
 #workspaces,
 #clock.1,
 #clock.2,
@@ -29,6 +34,7 @@ window#waybar {
 #disk,
 #idle_inhibitor,
 #custom-pacman,
+#custom-weather,
 #temperature,
 #bluetooth,
 #tray {
@@ -73,11 +79,11 @@ window#waybar {
 }
 #custom-pacman {
     font-weight: bold;
-    padding: 0 0.6em;
+    padding: 0 0.6em
 }
 #temperature {
-    background-color:#44475a; 
-    color: #bd93f9 
+    background-color:#44475a;
+    color: #bd93f9
 }
 #temperature.critical {
     background: #ff5555;

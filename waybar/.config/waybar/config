@@ -1,107 +1,103 @@
-// Global 
+// Global
 [
-{
-  "include": [
-      "$HOME/.config/waybar/modules"
-  ],
+	{
+		"include": ["$HOME/.config/waybar/modules"],
 
-    "layer": "top",
-    "position": "top",
-    "output": "DP-1",
+		"layer": "top",
+		"position": "top",
+		"output": "DP-1",
 
-    // If height property would be not present, it'd be calculated dynamically
+		// If height property would be not present, it'd be calculated dynamically
 
-  	"custom/left-arrow-dark": {
-		"format": "",
-		"tooltip": false
+		"custom/left-arrow-dark": {
+			"format": "",
+			"tooltip": false
+		},
+		"custom/left-arrow-light": {
+			"format": "",
+			"tooltip": false
+		},
+		"custom/right-arrow-dark": {
+			"format": "",
+			"tooltip": false
+		},
+		"custom/right-arrow-light": {
+			"format": "",
+			"tooltip": false
+		},
+
+		"modules-left": [
+			"sway/workspaces",
+			"custom/right-arrow-dark"
+			/* "sway/mode", */
+		],
+
+		"modules-center": [
+			"custom/left-arrow-dark",
+			"clock#1",
+			"custom/left-arrow-light",
+			"custom/left-arrow-dark",
+			"clock#2",
+			"custom/right-arrow-dark",
+			"custom/right-arrow-light",
+			"clock#3",
+			"custom/right-arrow-dark"
+		],
+
+		"modules-right": [
+			"custom/left-arrow-dark",
+			"custom/pacman",
+			"custom/left-arrow-light",
+			"custom/left-arrow-dark",
+			"idle_inhibitor",
+			"custom/left-arrow-light",
+			"custom/left-arrow-dark",
+			"memory",
+			"custom/left-arrow-light",
+			"custom/left-arrow-dark",
+			"cpu",
+			"temperature",
+			"custom/left-arrow-light",
+			"custom/left-arrow-dark",
+			"pulseaudio",
+			"custom/left-arrow-light",
+			"custom/left-arrow-dark",
+			"bluetooth",
+			"custom/left-arrow-light",
+			"custom/left-arrow-dark",
+			"tray"
+		]
 	},
-	"custom/left-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
+	{
+		"include": ["$HOME/.config/waybar/modules-right-display"],
 
-   "modules-left": [
-        "sway/workspaces",
-        "custom/right-arrow-dark"
-        /* "sway/mode", */
-    ],
- 
-    "modules-center": [
-    "custom/left-arrow-dark",
-		"clock#1",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"clock#2",
-		"custom/right-arrow-dark",
-		"custom/right-arrow-light",
-		"clock#3",
-		"custom/right-arrow-dark"
-    ],
+		"layer": "top",
+		"position": "top",
+		"output": "HDMI-A-2",
 
-	"modules-right": [
-		"custom/left-arrow-dark",
-		"custom/pacman",
-    "custom/left-arrow-light",
-		"custom/left-arrow-dark",
-    "idle_inhibitor",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"memory",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"cpu",
-    "temperature",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"pulseaudio",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"bluetooth",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"tray"
-	],
-},
-{
-  "include": [
-      "$HOME/.config/waybar/modules-right-display"
-  ],
+		// If height property would be not present, it'd be calculated dynamically
 
-    "layer": "top",
-    "position": "top",
-    "output": "HDMI-A-2",
+		"custom/left-arrow-dark": {
+			"format": "",
+			"tooltip": false
+		},
+		"custom/left-arrow-light": {
+			"format": "",
+			"tooltip": false
+		},
+		"custom/right-arrow-dark": {
+			"format": "",
+			"tooltip": false
+		},
+		"custom/right-arrow-light": {
+			"format": "",
+			"tooltip": false
+		},
 
-    // If height property would be not present, it'd be calculated dynamically
-
-  	"custom/left-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/left-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-
-   "modules-left": [
-        "sway/workspaces",
-        "custom/right-arrow-dark"
-        /* "sway/mode", */
-    ],
-}
+		"modules-left": [
+			"sway/workspaces",
+			"custom/right-arrow-dark"
+			/* "sway/mode", */
+		]
+	}
 ]
