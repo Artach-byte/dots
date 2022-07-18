@@ -1,5 +1,5 @@
 * {
-	font-size: 15px;
+	font-size: 13px;
 	font-family: JetBrainsMono Nerd Font;
 }
 
@@ -37,9 +37,10 @@ tooltip {
 #custom-weather,
 #temperature,
 #bluetooth,
+#network,
+#custom-power,
 #tray {
-	background: #44475a;
-  padding: 0 0.6em;
+	background: #44475a
 }
 
 #workspaces button {
@@ -81,12 +82,21 @@ tooltip {
     font-weight: bold;
     padding: 0 0.6em
 }
+#custom-power {
+    padding: 0 0.7em
+}
 #temperature {
     background-color:#44475a;
     color: #bd93f9
 }
 #temperature.critical {
     background: #ff5555;
+}
+#tray {
+  padding: 0 0.6em;
+}
+#network {
+  padding: 0 0.6em;
 }
 
 #clock,
