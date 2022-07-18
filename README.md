@@ -1,13 +1,21 @@
-# Terminal Software
+# Dotfile managment
+
+- Curently using gnu/stow for mangment which is why the repo looks like a mess.
+- TODO Write a bash script to auto install req and to stow.
+
+## Terminal Software
+
+---
+
 - ZSH
 - NEOVIM
-	- xsel # for X11
-	- wl-clipboard # for wayland
-	- pip install pynvim
-	- npm i -g neovim
-	- ripgrep
-	- fd
-	- flake8
+  - xsel # for X11
+  - wl-clipboard # for wayland
+  - pip install pynvim
+  - npm i -g neovim
+  - ripgrep
+  - fd
+  - flake8
 - TMUX
 - Wezterm
 - XPLR
@@ -22,11 +30,14 @@
 - macchina
 - exa
 - delta for git diff
-- bat 
+- bat
 - ncspot
 - bitwarden-cli
 
-# GUI APPS
+## GUI APPS
+
+---
+
 - coolero
 - openrgb
 - vorta/borg
@@ -42,7 +53,7 @@
 - heroic launcher
 - spotify
 - firefox
-- vscode 
+- vscode
 - btrfs-assistant/btrfs-maintenance
 - bitwarden
 - mangohud/goverlay
