@@ -16,7 +16,7 @@ nvim_tree.setup {
     update_cwd = true,
   },
 
-  open_on_setup = true,
+  open_on_setup = false,
 
   renderer = {
     root_folder_modifier = ":t",
