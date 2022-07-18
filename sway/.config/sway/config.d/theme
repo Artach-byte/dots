@@ -2,11 +2,11 @@
 exec_always ~/.config/sway/scripts/import-gsettings
 
 # Set inner/outer gaps
-gaps inner 4
-gaps outer 4
+gaps inner 10
+gaps outer 5
 
 # Hide titlebar on windows:
-default_border pixel 1
+default_border pixel 2
 
 # Default Font
 font pango:Noto Sans Regular 10
@@ -15,7 +15,7 @@ font pango:Noto Sans Regular 10
 smart_borders on
 
 # Set wallpaper:
-exec swaybg -i ~/Pictures/wallpaper/dracula_theme/PUcWcyV.png
+exec swaybg -i ~/Pictures/wallpaper/dracula_theme/bha6owsx0cb91.jpg
 
 # Title format for windows
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"
