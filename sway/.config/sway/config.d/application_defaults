@@ -5,11 +5,17 @@ for_window [app_id="firefox"] focus
 assign [class="firefox"] 2
 for_window [class="firefox"] focus
 
-assign [app_id=thunar] 3
-for_window [app_id=thunar] focus
+assign [class="obsidian"] 3
+for_window [class="obsidian"] focus
 
-assign [class="Telegram"] 4
-for_window [class="Telegram"] focus
+assign [class="thunderbird"] 4
+for_window [class="thunderbird"] focus
+
+assign [class="steam"] 5
+for_window [class="steam"] focud
+
+assign [class="discord"] 4
+for_window [class="discord"] focus
 
 
 for_window [app_id="xed"] focus
@@ -40,8 +46,8 @@ for_window [title="File Operation Progress"] floating enable, border pixel 1, st
 for_window [app_id="firefox" title="Library"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
 for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
 for_window [title="Picture in picture"] floating enable, sticky enable
-for_window [title="nmtui"] floating enable,  resize set width 50 ppt height 70 ppt
-for_window [title="htop"] floating enable, resize set width 50 ppt height 70 ppt
+# for_window [title="nmtui"] floating enable,  resize set width 50 ppt height 70 ppt
+# for_window [title="htop"] floating enable, resize set width 50 ppt height 70 ppt
 for_window [app_id="xsensors"] floating enable
 for_window [title="Save File"] floating enable
 for_window [app_id="firefox" title="Firefox — Sharing Indicator"] kill
