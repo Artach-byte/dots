@@ -23,18 +23,34 @@
 		"format-icons": ["", "", "", "", ""]
 	},
 
+  "backlight#icon": {
+		"format": "{icon}",
+		"format-icons": [""],
+		"on-scroll-down": "brightnessctl -c backlight set 1%-",
+		"on-scroll-up": "brightnessctl -c backlight set +1%"
+	},
+
+	"backlight#value": {
+		"format": "{percent}%",
+		"on-scroll-down": "brightnessctl -c backlight set 1%-",
+		"on-scroll-up": "brightnessctl -c backlight set +1%"
+	},
+
+  "bluetooth": {
+		// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+		"format": "",
+		"format-disabled": "", // an empty format will hide the module
+		"format-connected": "  {num_connections} connected",
+		"tooltip-format": "{controller_alias}\t{controller_address}",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+	},
+
 	"custom/PBPbattery": {
 		"exec": "~/.config/waybar/scripts/PBPbattery.sh",
 		"format": "{}"
 	},
-
-	/* "clock": { */
-	/*     "interval": 10, */
-	/*     "format-alt": " {:%D}", // Icon: calendar-alt */
-	/*     "format": "{:%I:%M %p}", */
-	/*     "tooltip-format": "{:%e %B %Y}" */
-	/* }, */
-
+	
 	"clock#1": {
 		"format": "{:%a}",
 		"tooltip": false
@@ -48,7 +64,7 @@
 		"tooltip": false
 	},
 
-	"cpu": {
+  "cpu": {
 		"interval": 5,
 		"format": " {usage}%", // Icon: microchip
 		"states": {
@@ -69,20 +85,59 @@
 		"on-click": "~/.config/waybar/scripts/keyhint.sh"
 	},
 
-	"memory": {
+	"custom/launcher": {
+		"format": " ",
+		"on-click": "exec wofi -c ~/.config/wofi/config -I",
+		"tooltip": false
+	},
+
+	"custom/power": {
+		"format": "⏻ ",
+		"on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+		"tooltip": false
+	},
+
+	"custom/pacman": {
+		"format": " {}",
+		"interval": 15, // every hour
+		"exec": "checkupdates | wc -l", // # of updates
+		"exec-if": "exit 0", // always run; consider advanced run conditions
+		"on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar", // update system
+		"signal": 8,
+		"max-length": 5,
+		"min-length": 3
+	},
+
+  "memory": {
 		"interval": 5,
 		"format": " {}%", // Icon: memory
-		"on-click": "xfce4-terminal -e 'htop'",
+		"on-click": "kitty -e 'htop'",
 		"states": {
 			"warning": 70,
 			"critical": 90
 		}
 	},
 
-	"sway/mode": {
-		"format": "{}",
-		"tooltip": false
-	},
+  "network": {
+    "interval": 5,
+    "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
+    "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+    "format-disconnected": "⚠  Disconnected",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "on-click": "kitty -e 'nmtui'",
+    },
+
+  "network#vpn": {
+    "interface": "tun0",
+    "format": "  {essid} ({signalStrength}%)",
+    "format-disconnected": "⚠  Disconnected",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+  },
+
+  "sway/mode": {
+    "format": " {}",
+    "max-length": 50
+},
 
 	"sway/window": {
 		"format": "{}",
@@ -101,14 +156,14 @@
 			"5": []
 		},
 
-		"format": "  {icon}  ",
+	  "format": "  {icon}  ",
 		//"format":"{icon}",
 		"format-icons": {
-			"1": "",
-			"2": "",
-			"3": "",
-			"4": "",
-			"5": ""
+			"1": "I",
+			"2": "II",
+			"3": "III",
+			"4": "IV",
+			"5": "V"
 		}
 	},
 
@@ -134,112 +189,20 @@
 		"on-scroll-down": "pamixer -ud 2"
 	},
 
-	"custom/weather": {
-		"format": "<span font_family='Weather Icons'>{icon}</span> {}",
-		"format-icons": {
-			"01d": "",
-			"01n": "",
-			"02d": "",
-			"02n": "",
-			"03d": "",
-			"03n": "",
-			"04d": "",
-			"04n": "",
-			"09d": "",
-			"09n": "",
-			"10d": "",
-			"10n": "",
-			"11d": "",
-			"11n": "",
-			"13d": "",
-			"13n": "",
-			"50d": "",
-			"50n": ""
-		},
-		"tooltip": false,
-		"interval": 1200,
-		"exec": "python ~/.config/waybar/scripts/openWeatherMap.py",
-		"return-type": "json",
-		"escape": true
-	},
-
 	"tray": {
 		"icon-size": 15,
 		"spacing": 5
 	},
 
-	"backlight#icon": {
-		"format": "{icon}",
-		"format-icons": [""],
-		"on-scroll-down": "brightnessctl -c backlight set 1%-",
-		"on-scroll-up": "brightnessctl -c backlight set +1%"
-	},
-
-	"backlight#value": {
-		"format": "{percent}%",
-		"on-scroll-down": "brightnessctl -c backlight set 1%-",
-		"on-scroll-up": "brightnessctl -c backlight set +1%"
-	},
-
-	"custom/firefox": {
-		"format": " ",
-		"on-click": "exec firefox",
-		"tooltip": false
-	},
-
-	"custom/terminal": {
-		"format": " ",
-		"on-click": "exec xfce4-terminal",
-		"tooltip": false
-	},
-
-	"custom/files": {
-		"format": " ",
-		"on-click": "exec thunar",
-		"tooltip": false
-	},
-
-	"custom/launcher": {
-		"format": " ",
-		"on-click": "exec wofi -c ~/.config/wofi/config -I",
-		"tooltip": false
-	},
-
-	"custom/power": {
-		"format": "⏻",
-		"on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
-		"tooltip": false
-	},
-
-	"custom/pacman": {
-		"format": "<big></big> {}",
-		"interval": 15, // every hour
-		"exec": "checkupdates | wc -l", // # of updates
-		"exec-if": "exit 0", // always run; consider advanced run conditions
-		"on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar", // update system
-		"signal": 8,
-		"max-length": 5,
-		"min-length": 3
-	},
-
 	"temperature": {
 		//"thermal-zone": 1,
 		"interval": "4",
-		"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
 		"critical-threshold": 74,
 		"format": "{icon} {temperatureC}°C ",
-		"format-icons": ["", "", ""],
+		"format-icons": [""],
 		"max-length": 7,
 		"min-length": 7
-	},
-
-	"bluetooth": {
-		// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-		"format": "",
-		"format-disabled": "", // an empty format will hide the module
-		"format-connected": "  {num_connections} connected",
-		"tooltip-format": "{controller_alias}\t{controller_address}",
-		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
 	}
+
 }
