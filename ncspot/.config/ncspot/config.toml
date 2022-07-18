@@ -18,8 +18,8 @@ album_column = true
 
 
 [theme]
-# background = "default"
-background = "black"
+background = "default"
+# background = "black"
 primary = "#F8F8F2"
 secondary = "light black"
 title = "#bd93f9"
