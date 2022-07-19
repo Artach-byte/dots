@@ -1,77 +1,37 @@
 {
 	// Modules
 
+	"custom/pacman": {
+		"format": " {}",
+		"interval": 15, // every hour
+		"exec": "checkupdates | wc -l", // # of updates
+		"exec-if": "exit 0", // always run; consider advanced run conditions
+		"on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar", // update system
+		"signal": 8,
+		"max-length": 5,
+		"min-length": 3
+	},
+
 	"idle_inhibitor": {
-		"format": "{icon} ",
+		"format": "{icon}",
 		"format-icons": {
 			"activated": "",
 			"deactivated": ""
 		}
 	},
-
-	"battery": {
-		"states": {
-			// "good": 95,
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{capacity}% {icon}",
-		"format-charging": "{capacity}% ",
-		"format-plugged": "{capacity}% ",
-		// "format-good": "", // An empty format will hide the module
-		// "format-full": "",
-		"format-icons": ["", "", "", "", ""]
+	"clock": {
+		"interval": 1,
+		"format": "<b>{:%H:%M:%S}</b>",
+		"format-alt": "{:%Y-%m-%d}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
 	},
-
-  "backlight#icon": {
-		"format": "{icon}",
-		"format-icons": [""],
-		"on-scroll-down": "brightnessctl -c backlight set 1%-",
-		"on-scroll-up": "brightnessctl -c backlight set +1%"
+	"cpu": {
+		"format": " {usage}%",
+		"tooltip": true
 	},
-
-	"backlight#value": {
-		"format": "{percent}%",
-		"on-scroll-down": "brightnessctl -c backlight set 1%-",
-		"on-scroll-up": "brightnessctl -c backlight set +1%"
-	},
-
-  "bluetooth": {
-		// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-		"format": "",
-		"format-disabled": "", // an empty format will hide the module
-		"format-connected": "  {num_connections} connected",
-		"tooltip-format": "{controller_alias}\t{controller_address}",
-		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-	},
-
-	"custom/PBPbattery": {
-		"exec": "~/.config/waybar/scripts/PBPbattery.sh",
-		"format": "{}"
-	},
-	
-	"clock#1": {
-		"format": "{:%a}",
-		"tooltip": false
-	},
-	"clock#2": {
-		"format": "{:%I:%M %p}",
-		"tooltip": false
-	},
-	"clock#3": {
-		"format": "{:%m-%d}",
-		"tooltip": false
-	},
-
-  "cpu": {
-		"interval": 5,
-		"format": " {usage}%", // Icon: microchip
-		"states": {
-			"warning": 70,
-			"critical": 90
-		},
-		"on-click": "kitty -e 'htop'"
+	"disk": {
+		"format": " {}%",
+		"tooltip-format": "{used} / {total} used"
 	},
 
 	"custom/keyboard-layout": {
@@ -97,51 +57,130 @@
 		"tooltip": false
 	},
 
-	"custom/pacman": {
-		"format": " {}",
-		"interval": 15, // every hour
-		"exec": "checkupdates | wc -l", // # of updates
-		"exec-if": "exit 0", // always run; consider advanced run conditions
-		"on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar", // update system
-		"signal": 8,
-		"max-length": 5,
-		"min-length": 3
+	"custom/weather": {
+		"return-type": "json",
+		"exec": "sh $HOME/.config/waybar/scripts/weather.sh",
+		"interval": 300,
+		"on-click": "firefox https://wttr.in"
 	},
 
-  "memory": {
-		"interval": 5,
-		"format": " {}%", // Icon: memory
-		"on-click": "kitty -e 'htop'",
+	"memory": {
+		"format": " {}%",
+		"tooltip-format": "{used:0.1f}G / {total:0.1f}G used"
+	},
+	"temperature": {
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"critical-threshold": 80,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"backlight": {
+		"device": "intel_backlight",
+		"interval": 1,
+		"on-scroll-down": "brightlight -pd 1",
+		"on-scroll-up": "brightlight -pi 1",
+		"format": "{icon} {percent}%",
+		"format-icons": ["", ""],
+		"on-click": "wdisplays"
+	},
+	"battery#bat1": {
+		"bat": "BAT0",
+		"adapter": "AC",
+		"interval": 10,
+		"full-at": 99,
 		"states": {
-			"warning": 70,
-			"critical": 90
-		}
+			"full": 100,
+			"good": 99,
+			"empty": 5
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": " {capacity}%",
+		"format-plugged": " {capacity}%",
+		"format-empty": "",
+		"format-full": "",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"battery#bat2": {
+		"bat": "BAT1",
+		"adapter": "AC",
+		"interval": 10,
+		"states": {
+			"full": 100,
+			"good": 99,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": " {capacity}%",
+		"format-plugged": " {capacity}%",
+		"format-full": "",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"network#disconnected": {
+		"tooltip-format": "No connection!",
+		"format-ethernet": "",
+		"format-wifi": "",
+		"format-linked": "",
+		"format-disconnected": "",
+		"on-click": "nm-connection-editor"
+	},
+	"network#ethernet": {
+		"interface": "enp*",
+		"format-ethernet": "",
+		"format-wifi": "",
+		"format-linked": "",
+		"format-disconnected": "",
+		"tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+		"on-click": "nm-connection-editor"
+	},
+	"network#wifi": {
+		"format-ethernet": "",
+		"format-wifi": " {essid} ({signalStrength}%)",
+		"format-linked": "",
+		"format-disconnected": "",
+		"tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+		"on-click": "nm-connection-editor"
+	},
+	"network#vpn": {
+		"interface": "tun0",
+		"format": "",
+		"format-disconnected": "",
+		"tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+		"on-click": "nm-connection-editor"
+	},
+	"pulseaudio": {
+		"scroll-step": 1,
+		"format": "{icon} {volume}%{format_source}",
+		"format-bluetooth": "{icon} {volume}%{format_source}",
+		"format-bluetooth-muted": " {icon}{format_source}",
+		"format-muted": " {format_source}",
+		"format-source": "  {volume}%",
+		"format-source-muted": " ",
+		"format-icons": {
+			"headphone": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
+		"on-click": "pavucontrol"
 	},
 
-  "network": {
-    "interval": 5,
-    "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
-    "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
-    "format-disconnected": "⚠  Disconnected",
-    "tooltip-format": "{ifname}: {ipaddr}",
-    "on-click": "kitty -e 'nmtui'",
-    },
+	"tray": {
+		"icon-size": 13,
+		"spacing": 10
+	},
 
-  "network#vpn": {
-    "interface": "tun0",
-    "format": "  {essid} ({signalStrength}%)",
-    "format-disconnected": "⚠  Disconnected",
-    "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-  },
+	/* "sway/window": { */
+	/* 	"format": "{} ", */
+	/* 	"on-click": "swaymsg kill" */
+	/* }, */
 
-  "sway/mode": {
-    "format": " {}",
-    "max-length": 50
-},
-
-	"sway/window": {
-		"format": "{}",
-		"max-length": 120
+	"wlr/taskbar": {
+		"format": "{icon} {name}",
+		"icon-size": 13,
+		"tooltip": false,
+		"on-click": "activate",
+		"on-click-right": "close"
 	},
 
 	"sway/workspaces": {
@@ -156,7 +195,7 @@
 			"5": []
 		},
 
-	  "format": "  {icon}  ",
+		"format": "  {icon}  ",
 		//"format":"{icon}",
 		"format-icons": {
 			"1": "I",
@@ -165,44 +204,5 @@
 			"4": "IV",
 			"5": "V"
 		}
-	},
-
-	"pulseaudio": {
-		"scroll-step": 1, // %, can be a float
-		"format": "{volume}% {icon}",
-		"format-bluetooth": "{volume}% {icon}  {format_source}",
-		"format-bluetooth-muted": " {icon}  {format_source}",
-		"format-muted": "婢 {format_source}",
-		"format-source": "{volume}% ",
-		"format-source-muted": "",
-		"format-icons": {
-			"headphone": "",
-			"hands-free": "וֹ",
-			"headset": "  ",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": [""]
-		},
-		"on-click": "pavucontrol",
-		"on-scroll-up": "pamixer -ui 2",
-		"on-scroll-down": "pamixer -ud 2"
-	},
-
-	"tray": {
-		"icon-size": 15,
-		"spacing": 5
-	},
-
-	"temperature": {
-		//"thermal-zone": 1,
-		"interval": "4",
-		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-		"critical-threshold": 74,
-		"format": "{icon} {temperatureC}°C ",
-		"format-icons": [""],
-		"max-length": 7,
-		"min-length": 7
 	}
-
 }

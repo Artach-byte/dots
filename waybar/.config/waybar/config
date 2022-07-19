@@ -3,48 +3,71 @@
 	{
 		"include": ["$HOME/.config/waybar/modules"],
 
+		"name": "mainbar",
 		"layer": "top",
 		"position": "top",
 		"output": "DP-1",
 
 		// If height property would be not present, it'd be calculated dynamically
 
-
 		"modules-left": [
-			"sway/workspaces",
-			"sway/mode"
-		],
+    "disk",
+    "memory",
+    "cpu",
+    "temperature",
+    "pulseaudio",
+    "custom/pacman",
+    ],
 
-		"modules-center": [
-			"clock#1",
-			"clock#2",
-			"clock#3",
-		],
+		"modules-center": ["sway/window"],
 
 		"modules-right": [
-			"custom/pacman",
-			"memory",
-			"cpu",
-			"temperature",
-			"pulseaudio",
-      "network",
-			"bluetooth",
-      "tray",
-			"custom/power"
+			"custom/weather",
+		  "network#vpn",
+			"network#wifi",
+			"network#ethernet",
+			"network#disconnected",
+			"custom/power",
+		]
+	},
+	{
+		"include": ["$HOME/.config/waybar/modules"],
+
+		"name": "mainbar-bottom",
+		"layer": "top",
+		"position": "bottom",
+		"output": "DP-1",
+
+		// If height property would be not present, it'd be calculated dynamically
+
+		"modules-left": [
+      "sway/workspaces"
+    ],
+
+		"modules-center": [
+    "wlr/taskbar",
+    ],
+
+		"modules-right": [
+			"tray",
 		]
 	},
 	{
 		"include": ["$HOME/.config/waybar/modules-right-display"],
 
+		"name": "rightbar",
 		"layer": "top",
 		"position": "top",
 		"output": "HDMI-A-2",
 
 		// If height property would be not present, it'd be calculated dynamically
 
-    "modules-left": [
-			"sway/workspaces"
-			/* "sway/mode", */
-		]
+		"modules-left": [
+			"sway/workspaces",
+		],
+    
+    "modules-center": [
+    "sway/window",
+    ]
 	}
 ]
