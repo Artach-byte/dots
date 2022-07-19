@@ -12,17 +12,21 @@ window#waybar {
 	transition-duration: 0.5s;
 }
 
-/* .mainbar { */
-/* 	border-bottom: 2px solid rgba(100, 114, 125, 1); */
-/* } */
-/**/
-/* .mainbar-bottom { */
-/*     border-top: 3px solid rgba(100, 114, 125, 1); */
-/* } */
-/**/
-/* .rightbar { */
-/* 	border-bottom: 3px solid rgba(100, 114, 125, 1); */
-/* } */
+.mainbar {
+	border-bottom: 2px solid rgba(100, 114, 125, 1);
+}
+
+.mainbar-bottom {
+    border-top: 3px solid rgba(100, 114, 125, 1);
+}
+
+.rightbar {
+	border-bottom: 3px solid rgba(100, 114, 125, 1);
+}
+
+.rightbar-bottom {
+    border-top: 3px solid rgba(100, 114, 125, 1);
+}
 
 #workspaces button:hover {
 	background: rgba(0, 0, 0, 0.2);

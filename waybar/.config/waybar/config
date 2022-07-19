@@ -8,14 +8,16 @@
 		"position": "top",
 		"output": "DP-1",
 
-		// If height property would be not present, it'd be calculated dynamically
-
 		"modules-left": [
+    "battery#bat1",
+    "battery#bat2",
     "disk",
     "memory",
     "cpu",
     "temperature",
     "pulseaudio",
+    "backlight",
+    "idle_inhibitor",
     "custom/pacman",
     ],
 
@@ -27,6 +29,8 @@
 			"network#wifi",
 			"network#ethernet",
 			"network#disconnected",
+      "bluetooth",
+      "clock",
 			"custom/power",
 		]
 	},
@@ -60,14 +64,53 @@
 		"position": "top",
 		"output": "HDMI-A-2",
 
+		"modules-left": [
+    "battery#bat1",
+    "battery#bat2",
+    "disk",
+    "memory",
+    "cpu",
+    "temperature",
+    "pulseaudio",
+    "backlight",
+    "idle_inhibitor",
+    "custom/pacman",
+    ],
+
+		"modules-center": ["sway/window"],
+
+		"modules-right": [
+			"custom/weather",
+		  "network#vpn",
+			"network#wifi",
+			"network#ethernet",
+			"network#disconnected",
+      "bluetooth",
+      "clock",
+			"custom/power",
+		]
+	},
+
+  	{
+		"include": ["$HOME/.config/waybar/modules-right-display"],
+
+		"name": "rightbar-bottom",
+		"layer": "top",
+		"position": "bottom",
+		"output": "HDMI-A-2",
+
 		// If height property would be not present, it'd be calculated dynamically
 
 		"modules-left": [
-			"sway/workspaces",
-		],
-    
-    "modules-center": [
-    "sway/window",
-    ]
+      "sway/workspaces"
+    ],
+
+		"modules-center": [
+    "wlr/taskbar",
+    ],
+
+		"modules-right": [
+			"tray",
+		]
 	}
 ]
