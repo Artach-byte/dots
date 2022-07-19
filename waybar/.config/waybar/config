@@ -9,63 +9,27 @@
 
 		// If height property would be not present, it'd be calculated dynamically
 
-		"custom/left-arrow-dark": {
-			"format": "",
-			"tooltip": false
-		},
-		"custom/left-arrow-light": {
-			"format": "",
-			"tooltip": false
-		},
-		"custom/right-arrow-dark": {
-			"format": "",
-			"tooltip": false
-		},
-		"custom/right-arrow-light": {
-			"format": "",
-			"tooltip": false
-		},
 
 		"modules-left": [
 			"sway/workspaces",
-			"custom/right-arrow-dark",
 			"sway/mode"
 		],
 
 		"modules-center": [
-			"custom/left-arrow-dark",
 			"clock#1",
-			"custom/left-arrow-light",
-			"custom/left-arrow-dark",
 			"clock#2",
-			"custom/right-arrow-dark",
-			"custom/right-arrow-light",
 			"clock#3",
-			"custom/right-arrow-dark"
 		],
 
 		"modules-right": [
-			"custom/left-arrow-dark",
 			"custom/pacman",
-		  "custom/left-arrow-light",
-			"custom/left-arrow-dark",
 			"memory",
-			"custom/left-arrow-light",
-			"custom/left-arrow-dark",
 			"cpu",
 			"temperature",
-			"custom/left-arrow-light",
-			"custom/left-arrow-dark",
 			"pulseaudio",
-			"custom/left-arrow-light",
-			"custom/left-arrow-dark",
       "network",
 			"bluetooth",
-      "custom/left-arrow-light",
-			"custom/left-arrow-dark",
       "tray",
-			"custom/left-arrow-light",
-			"custom/left-arrow-dark",
 			"custom/power"
 		]
 	},
@@ -78,26 +42,8 @@
 
 		// If height property would be not present, it'd be calculated dynamically
 
-		"custom/left-arrow-dark": {
-			"format": "",
-			"tooltip": false
-		},
-		"custom/left-arrow-light": {
-			"format": "",
-			"tooltip": false
-		},
-		"custom/right-arrow-dark": {
-			"format": "",
-			"tooltip": false
-		},
-		"custom/right-arrow-light": {
-			"format": "",
-			"tooltip": false
-		},
-
-		"modules-left": [
-			"sway/workspaces",
-			"custom/right-arrow-dark"
+    "modules-left": [
+			"sway/workspaces"
 			/* "sway/mode", */
 		]
 	}

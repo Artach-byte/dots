@@ -15,15 +15,15 @@ font pango:Noto Sans Regular 10
 smart_borders on
 
 # Set wallpaper:
-exec swaybg -i ~/Pictures/wallpaper/dracula_theme/bha6owsx0cb91.jpg
+exec swaybg -i ~/Pictures/wallpaper/nord_theme/nord_mac_wallpaper.png
 
 # Title format for windows
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"
 for_window [shell="x_wayland"] title_format "%class - %title"
 
 # class                 border  bground text    indicator child_border
-client.focused          #bd93f9 #bd93f9 #F8F8F2 #6272A4   #bd93f9 
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.focused          #5e81ac #5e81ac #F8F8F2 #6272A4   #5e81ac 
+client.focused_inactive #3b4252 #3b4252 #F8F8F2 #44475A   #3b4252 
 client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36

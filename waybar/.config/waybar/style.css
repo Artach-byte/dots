@@ -4,23 +4,13 @@
 }
 
 window#waybar {
-	background: #282a36;
-	color: #f8f8f2;
-}
-
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-	color: #44475a;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	color: #282a36;
-	background: #44475a;
+	background: #2e3440;
+	color: #d8dee9;
 }
 
 tooltip {
-  background: #282a36;
-  border: 1px solid #bd93f9;
+  background: #2e3440;
+  border: 1px solid #5e81ac;
 }
 
 #workspaces,
@@ -40,63 +30,65 @@ tooltip {
 #network,
 #custom-power,
 #tray {
-	background: #44475a
+	background: #2e3440
 }
 
 #workspaces button {
 	padding: 0 2px;
-	color: #f8f8f2;
+	color: #d8dee9;
 }
 #workspaces button.focused {
-	color: #8be9fd;
+	color: #5e81ac;
 }
 #workspaces button:hover {
 	box-shadow: inherit;
 	text-shadow: inherit;
 }
 #workspaces button:hover {
-	background: #282a36;
-	border: #282a36;
+	background: #4c566a;
+	border: #4c566a;
 	padding: 0 3px;
 }
 #pulseaudio {
 	color: #8be9fd;
 }
 #bluetooth {
-	color: #8be9fd;
+	color: #b48ead;
   padding: 0 0.6em;
 }
 #memory {
-	color: #50fa7b;
+	color: #a3be8c;
 }
 #cpu {
-	color: #bd93f9;
+	color: #a3be8c;
 }
 #battery {
-	color: #859900;
+	color: #a3be8c;
 }
 #disk {
-	color: #b58900;
+	color: #a3be8c;
 }
 #custom-pacman {
     font-weight: bold;
     padding: 0 0.6em
 }
 #custom-power {
+  color: #bf616a;
     padding: 0 0.7em
 }
 #temperature {
-    background-color:#44475a;
-    color: #bd93f9
+    background-color:#2e3440;
+    color: #a3be8c
 }
 #temperature.critical {
-    background: #ff5555;
+    background: #bf616a;
 }
 #tray {
   padding: 0 0.6em;
 }
 #network {
-  padding: 0 0.6em;
+  color: #b48ead;
+  padding: 0 0.6em
 }
 
 #clock,
@@ -105,5 +97,5 @@ tooltip {
 #cpu,
 #battery,
 #disk {
-	padding: 0 10px;
+	padding: 0 0.6em;
 }

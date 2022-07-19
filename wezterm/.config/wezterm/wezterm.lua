@@ -46,8 +46,8 @@ wezterm.on(
 return {
  --[[  window_decorations           = "NONE", ]]
   enable_wayland               = true,
-  --color_scheme                 ="nord",
-  colors                       = dracula,
+  color_scheme                 ="nord",
+  --colors                       = dracula,
   hide_tab_bar_if_only_one_tab = true,
   tab_max_width                = 16,
   enable_scroll_bar            = false,
