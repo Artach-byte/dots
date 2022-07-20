@@ -1,7 +1,7 @@
 // Global
 [
 	{
-		"include": ["$HOME/.config/waybar/modules"],
+		"include": ["$HOME/.config/waybar/modules.jsonc"],
 
 		"name": "mainbar",
 		"layer": "top",
@@ -29,13 +29,12 @@
 			"network#wifi",
 			"network#ethernet",
 			"network#disconnected",
-      "bluetooth",
       "clock",
 			"custom/power",
 		]
 	},
 	{
-		"include": ["$HOME/.config/waybar/modules"],
+		"include": ["$HOME/.config/waybar/modules.jsonc"],
 
 		"name": "mainbar-bottom",
 		"layer": "top",
@@ -57,7 +56,7 @@
 		]
 	},
 	{
-		"include": ["$HOME/.config/waybar/modules-right-display"],
+		"include": ["$HOME/.config/waybar/modules-right-display.jsonc"],
 
 		"name": "rightbar",
 		"layer": "top",
@@ -79,20 +78,18 @@
 
 		"modules-center": ["sway/window"],
 
-		"modules-right": [
+		  "modules-right": [
 			"custom/weather",
 		  "network#vpn",
 			"network#wifi",
 			"network#ethernet",
 			"network#disconnected",
-      "bluetooth",
-      "clock",
 			"custom/power",
 		]
 	},
 
   	{
-		"include": ["$HOME/.config/waybar/modules-right-display"],
+		"include": ["$HOME/.config/waybar/modules-right-display.jsonc"],
 
 		"name": "rightbar-bottom",
 		"layer": "top",
