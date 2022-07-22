@@ -2668,7 +2668,7 @@ require("xpm").setup({
     'sayanarijit/trash-cli.xplr',
     'sayanarijit/dua-cli.xplr',
     'sayanarijit/fzf.xplr',
-    'sayanarijit/zentable.xplr',
+   -- 'sayanarijit/zentable.xplr',
     'igorepst/term.xplr',
     'sayanarijit/wl-clipboard.xplr',
     'sayanarijit/dragon.xplr',
@@ -2679,6 +2679,6 @@ require("xpm").setup({
 })
 
 local term = require('term')
-local k_hsplit = term.profile_tmux_hsplit()
+local k_hsplit = term.profile_kitty_hsplit()
 k_hsplit.key = 'ctrl-h'
-term.setup({ term.profile_tmux_vsplit(), k_hsplit })
+term.setup({ term.profile_kitty_vsplit(), k_hsplit })
