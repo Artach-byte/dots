@@ -6,3 +6,6 @@ alias ..='cd ..'
 
 # file Managers
 alias x='xplr'
+
+# kitty ssh
+alias ssh="kitty +kitten ssh"
