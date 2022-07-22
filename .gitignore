@@ -1,9 +1,7 @@
-*.log
-userstate.cbor
-/fzf
-fish/.config/fish/fish_variables
-zsh_history
-.directory
-ranger/.config/ranger/plugins/__pycache__/
-tmux/.config/tmux/plugins/
-tmux/.config/tmux/resurrect/
+config/.config/btop/btop.log
+config/.config/ncspot/userstate.cbor
+config/.config/fish/fish_variables
+config/.config/zsh/zsh_history
+config/.config/ranger/plugins/__pycache__/
+config/.config/tmux/plugins/
+config/.config/tmux/resurrect/
