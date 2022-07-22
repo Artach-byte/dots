@@ -2659,8 +2659,6 @@ require("xpm").setup({
   plugins = {
     -- Let xpm manage itself
     'dtomvan/xpm.xplr',
-    { name = 'sayanarijit/fzf.xplr' },
-    'dtomvan/xpm.xplr',
     { 'dtomvan/extra-icons.xplr',
       after = function()
         xplr.config.general.table.row.cols[2] = { format = "custom.icons_dtomvan_col_1" }

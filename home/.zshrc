@@ -2,7 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 ################################################################################
@@ -49,10 +49,10 @@ compinit
 
 # Nord theme for fzf
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    --color=fg:#e5e9f0,bg:#323844,hl:#81a1c1
-    --color=fg+:#e5e9f0,bg+:#323844,hl+:#81a1c1
-    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
-    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
+--color=fg:#e5e9f0,bg:#323844,hl:#81a1c1
+--color=fg+:#e5e9f0,bg+:#323844,hl+:#81a1c1
+--color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
+--color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
 
 ## Alias config
 source ~/.config/zsh/aliases.zsh
