@@ -16,6 +16,9 @@
   - ripgrep
   - fd
   - flake8
+  - prettier
+  - python-black
+  - google_java_format
 - TMUX
 - Wezterm
 - XPLR
