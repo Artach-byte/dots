@@ -1,8 +1,3 @@
-# Dotfile managment
-
-- Curently using gnu/stow for mangment which is why the repo looks like a mess.
-- TODO Write a bash script to auto install req and to stow.
-
 ## Terminal Software
 
 ---
