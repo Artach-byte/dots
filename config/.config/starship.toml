@@ -16,7 +16,7 @@ error_symbol = "[](red)"
 [directory]
 truncation_length = 32
 truncation_symbol = ""
-truncate_to_repo = false 
+truncate_to_repo = false
 format = '[\[](white)[$path](bold blue)[$read_only](bold red)[\]](white)'
 read_only = " "
 
@@ -95,4 +95,3 @@ symbol = " "
 
 [swift]
 symbol = "ﯣ "
-
