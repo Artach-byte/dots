@@ -8,4 +8,4 @@ alias ..='cd ..'
 alias x='xplr'
 
 # kitty ssh
-alias ssh="kitty +kitten ssh"
+#alias ssh="kitty +kitten ssh"
