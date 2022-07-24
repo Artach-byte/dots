@@ -8,17 +8,26 @@
 [core]
 	editor = nvim
   excludesFile = /home/joe/.gitignore
-  pager = delta
+ 	pager = diff-so-fancy | less --tabs=2 -RFXS --pattern '^(Date|added|deleted|modified): ' 
+[color "diff-highlight"]
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+	oldNormal = red bold
+[color "diff"]
+	meta = 11 bold
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[diff-so-fancy]
+	changeHunkIndicators = false
+	stripLeadingSymbols = false
+	markEmptyLines = false
+	rulerWidth =
+  useUnicodeRuler = false
 [credential "https://github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
   helper = !/usr/bin/gh auth git-credential
-[interactive]
-  diffFilter = delta --color-only
-[delta]
-  side-by-side = true
-  line-numbers-left-format = ""
-  line-numbers-right-format = "│ "
-  syntax-theme = Nord
