@@ -23,7 +23,7 @@ local colors = {
 }
 
 return {
-	--window_decorations           = "NONE",
+	window_decorations = "NONE",
 	font = wezterm.font_with_fallback({
 		"Caskaydia Cove Nerd Font",
 		"Fira Code",
