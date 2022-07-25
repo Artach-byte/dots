@@ -14,7 +14,7 @@
 - gh cli
 - macchina
 - exa
-- diff-so-fancy
+- delta for git diff
 - bat
 - ncspot
 - bitwarden-cli
