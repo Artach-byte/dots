@@ -44,3 +44,7 @@
 - steamtinkerlaunch
 - qbittorent
 - calibre
+
+### TODO
+
+- update app list
