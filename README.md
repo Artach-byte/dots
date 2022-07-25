@@ -1,19 +1,6 @@
-## Terminal Software
-
----
+# Terminal Software
 
 - ZSH
-- NEOVIM
-  - xsel # for X11
-  - wl-clipboard # for wayland
-  - pip install pynvim
-  - npm i -g neovim
-  - ripgrep
-  - fd
-  - flake8
-  - prettier
-  - python-black
-  - google_java_format
 - TMUX
 - Wezterm
 - XPLR
@@ -27,14 +14,12 @@
 - gh cli
 - macchina
 - exa
-- delta for git diff
+- diff-so-fancy
 - bat
 - ncspot
 - bitwarden-cli
 
 ## GUI APPS
-
----
 
 - coolero
 - openrgb
