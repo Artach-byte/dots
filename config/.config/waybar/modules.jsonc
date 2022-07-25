@@ -1,218 +1,218 @@
 {
-	// Modules
+  // Modules
 
-	"custom/pacman": {
-		"format": " {}",
-		"interval": 15, // every hour
-		"exec": "checkupdates | wc -l", // # of updates
-		"exec-if": "exit 0", // always run; consider advanced run conditions
-	// 	"on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar", // update system
-		"signal": 8,
-		"max-length": 5,
-		"min-length": 3
-	},
+  "custom/pacman": {
+    "format": " {}",
+    "interval": 15, // every hour
+    "exec": "checkupdates | wc -l", // # of updates
+    "exec-if": "exit 0", // always run; consider advanced run conditions
+    // 	"on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar", // update system
+    "signal": 8,
+    "max-length": 5,
+    "min-length": 3
+  },
 
-	"idle_inhibitor": {
-		"format": "{icon}",
-		"format-icons": {
-			"activated": "",
-			"deactivated": ""
-		}
-	},
-  
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+
   "bluetooth": {
-		// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-		"format": "",
-		"format-disabled": "", // an empty format will hide the module
-		"format-connected": "  {num_connections} connected",
-		"tooltip-format": "{controller_alias}\t{controller_address}",
-		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-	},
-	"clock": {
-		"interval": 1,
-		"format": "<b>{:%I:%M %p}</b>",
-		"format-alt": "{:%m-%d-%Y}",
-		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-	},
-	"cpu": {
-		"format": " {usage}%",
-		"tooltip": true
-	},
-	"disk": {
-		"format": " {}%",
-		"tooltip-format": "{used} / {total} used"
-	},
+    // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+    "format": "",
+    "format-disabled": "", // an empty format will hide the module
+    "format-connected": "  {num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+  "clock": {
+    "interval": 1,
+    "format": "<b>{:%I:%M %p}</b>",
+    "format-alt": "{:%m-%d-%Y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true
+  },
+  "disk": {
+    "format": " {}%",
+    "tooltip-format": "{used} / {total} used"
+  },
 
-	"custom/keyboard-layout": {
-		"exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
-		// Interval set only as a fallback, as the value is updated by signal
-		"interval": 30,
-		"format": "  {}", // Icon: keyboard
-		// Signal sent by Sway key binding (~/.config/sway/key-bindings)
-		"signal": 1, // SIGHUP
-		"tooltip": false,
-		"on-click": "~/.config/waybar/scripts/keyhint.sh"
-	},
+  "custom/keyboard-layout": {
+    "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+    // Interval set only as a fallback, as the value is updated by signal
+    "interval": 30,
+    "format": "  {}", // Icon: keyboard
+    // Signal sent by Sway key binding (~/.config/sway/key-bindings)
+    "signal": 1, // SIGHUP
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/keyhint.sh"
+  },
 
-	"custom/launcher": {
-		"format": " ",
-		"on-click": "exec wofi -c ~/.config/wofi/config -I",
-		"tooltip": false
-	},
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "exec wofi -c ~/.config/wofi/config -I",
+    "tooltip": false
+  },
 
-	"custom/power": {
-		"format": "⏻ ",
-		"on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
-		"tooltip": false
-	},
+  "custom/power": {
+    "format": "⏻ ",
+    "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+    "tooltip": false
+  },
 
-	"custom/weather": {
-		"return-type": "json",
-		"exec": "sh $HOME/.config/waybar/scripts/weather.sh",
-		"interval": 300,
-		"on-click": "firefox https://wttr.in"
-	},
+  "custom/weather": {
+    "return-type": "json",
+    "exec": "sh $HOME/.config/waybar/scripts/weather.sh",
+    "interval": 300,
+    "on-click": "firefox https://wttr.in"
+  },
 
-	"memory": {
-		"format": " {}%",
-		"tooltip-format": "{used:0.1f}G / {total:0.1f}G used"
-	},
-	"temperature": {
-		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-		"critical-threshold": 80,
-		"format": "{icon} {temperatureC}°C",
-		"format-icons": ["", "", "", "", ""]
-	},
-	"backlight": {
-		"device": "intel_backlight",
-		"interval": 1,
-		"on-scroll-down": "brightlight -pd 1",
-		"on-scroll-up": "brightlight -pi 1",
-		"format": "{icon} {percent}%",
-		"format-icons": ["", ""],
-		"on-click": "wdisplays"
-	},
-	"battery#bat1": {
-		"bat": "BAT0",
-		"adapter": "AC",
-		"interval": 10,
-		"full-at": 99,
-		"states": {
-			"full": 100,
-			"good": 99,
-			"empty": 5
-		},
-		"format": "{icon} {capacity}%",
-		"format-charging": " {capacity}%",
-		"format-plugged": " {capacity}%",
-		"format-empty": "",
-		"format-full": "",
-		"format-icons": ["", "", "", "", ""]
-	},
-	"battery#bat2": {
-		"bat": "BAT1",
-		"adapter": "AC",
-		"interval": 10,
-		"states": {
-			"full": 100,
-			"good": 99,
-			"critical": 15
-		},
-		"format": "{icon} {capacity}%",
-		"format-charging": " {capacity}%",
-		"format-plugged": " {capacity}%",
-		"format-full": "",
-		"format-icons": ["", "", "", "", ""]
-	},
-	"network#disconnected": {
-		"tooltip-format": "No connection!",
-		"format-ethernet": "",
-		"format-wifi": "",
-		"format-linked": "",
-		"format-disconnected": "",
-		"on-click": "nm-connection-editor"
-	},
-	"network#ethernet": {
-		"interface": "enp*",
-		"format-ethernet": "",
-		"format-wifi": "",
-		"format-linked": "",
-		"format-disconnected": "",
-		"tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-		"on-click": "nm-connection-editor"
-	},
-	"network#wifi": {
-		"format-ethernet": "",
-		"format-wifi": " {essid} ({signalStrength}%)",
-		"format-linked": "",
-		"format-disconnected": "",
-		"tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-		"on-click": "nm-connection-editor"
-	},
-	"network#vpn": {
-		"interface": "tun0",
-		"format": "",
-		"format-disconnected": "",
-		"tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-		"on-click": "nm-connection-editor"
-	},
-	"pulseaudio": {
-		"scroll-step": 1,
-		"format": "{icon} {volume}%{format_source}",
-		"format-bluetooth": "{icon} {volume}%{format_source}",
-		"format-bluetooth-muted": " {icon}{format_source}",
-		"format-muted": " {format_source}",
-		"format-source": "  {volume}%",
-		"format-source-muted": " ",
-		"format-icons": {
-			"headphone": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": ["", "", ""]
-		},
-		"on-click": "pavucontrol"
-	},
+  "memory": {
+    "format": " {}%",
+    "tooltip-format": "{used:0.1f}G / {total:0.1f}G used"
+  },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "interval": 1,
+    "on-scroll-down": "brightlight -pd 1",
+    "on-scroll-up": "brightlight -pi 1",
+    "format": "{icon} {percent}%",
+    "format-icons": ["", ""],
+    "on-click": "wdisplays"
+  },
+  "battery#bat1": {
+    "bat": "BAT0",
+    "adapter": "AC",
+    "interval": 10,
+    "full-at": 99,
+    "states": {
+      "full": 100,
+      "good": 99,
+      "empty": 5
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-empty": "",
+    "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "battery#bat2": {
+    "bat": "BAT1",
+    "adapter": "AC",
+    "interval": 10,
+    "states": {
+      "full": 100,
+      "good": 99,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network#disconnected": {
+    "tooltip-format": "No connection!",
+    "format-ethernet": "",
+    "format-wifi": "",
+    "format-linked": "",
+    "format-disconnected": "",
+    "on-click": "nm-connection-editor"
+  },
+  "network#ethernet": {
+    "interface": "enp*",
+    "format-ethernet": "",
+    "format-wifi": "",
+    "format-linked": "",
+    "format-disconnected": "",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+    "on-click": "nm-connection-editor"
+  },
+  "network#wifi": {
+    "format-ethernet": "",
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-linked": "",
+    "format-disconnected": "",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+    "on-click": "nm-connection-editor"
+  },
+  "network#vpn": {
+    "interface": "tun0",
+    "format": "",
+    "format-disconnected": "",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+    "on-click": "nm-connection-editor"
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{icon} {volume}%{format_source}",
+    "format-bluetooth": "{icon} {volume}%{format_source}",
+    "format-bluetooth-muted": " {icon}{format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "  {volume}%",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
 
-	"tray": {
-		"icon-size": 13,
-		"spacing": 10
-	},
+  "tray": {
+    "icon-size": 13,
+    "spacing": 10
+  },
 
-	/* "sway/window": { */
-	/* 	"format": "{} ", */
-	/* 	"on-click": "swaymsg kill" */
-	/* }, */
+  /* "sway/window": { */
+  /* 	"format": "{} ", */
+  /* 	"on-click": "swaymsg kill" */
+  /* }, */
 
-	"wlr/taskbar": {
-		"format": "{icon} {name}",
-		"icon-size": 13,
-		"tooltip": false,
-		"on-click": "activate",
-		"on-click-right": "close"
-	},
+  "wlr/taskbar": {
+    "format": "{icon} {name}",
+    "icon-size": 13,
+    "tooltip": false,
+    "on-click": "activate",
+    "on-click-right": "close"
+  },
 
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"disable-markup": false,
-		"all-outputs": false,
-		"persistent_workspaces": {
-			"1": [],
-			"2": [],
-			"3": [],
-			"4": [],
-			"5": []
-		},
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "disable-markup": false,
+    "all-outputs": false,
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
 
-		"format": "  {icon}  ",
-		//"format":"{icon}",
-		"format-icons": {
-			"1": "I",
-			"2": "II",
-			"3": "III",
-			"4": "IV",
-			"5": "V"
-		}
-	}
+    "format": "  {icon}  ",
+    //"format":"{icon}",
+    "format-icons": {
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V"
+    }
+  }
 }
