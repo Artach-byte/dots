@@ -6,6 +6,4 @@ alias ..='cd ..'
 
 # file Managers
 alias x='xplr'
-
-# kitty ssh
-#alias ssh="kitty +kitten ssh"
+alias xcd='cd "$(xplr --print-pwd-as-result)"'
