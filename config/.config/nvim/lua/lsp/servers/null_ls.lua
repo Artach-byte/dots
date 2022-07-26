@@ -1,10 +1,7 @@
-local null_ls = require "null-ls"
+local ok, null_ls = pcall(require, "null-ls")
 
-local with_root_file = function(...)
-    local files = { ... }
-    return function(utils)
-        return utils.root_has_file(files)
-    end
+if not ok then
+    return
 end
 
 local formatting = null_ls.builtins.formatting
@@ -16,24 +13,17 @@ local _M = {}
 _M.setup = function(on_attach)
     null_ls.setup {
         sources = {
-            --diagnostics.hadolint,
-            diagnostics.markdownlint,
+            diagnostics.hadolint,
             diagnostics.tidy,
-            diagnostics.yamllint,
-            diagnostics.jsonlint,
-            --diagnostics.checkmake,
-            --diagnostics.alex,
             diagnostics.luacheck,
+            diagnostics.markdownlint,
 
             formatting.prettierd,
             formatting.stylua,
-            formatting.gofmt,
+            formatting.gofumpt,
             formatting.shfmt.with {
                 filetypes = { "sh", "bash", "zsh" },
             },
-            formatting.rustfmt,
-
-            code_actions.gitsigns,
         },
         on_attach = on_attach,
     }

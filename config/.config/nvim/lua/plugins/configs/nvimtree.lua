@@ -3,7 +3,7 @@ local signs = require("utils").signs
 
 nvimtree.setup {
     auto_reload_on_write = true,
-    create_in_closed_folder = true,
+    create_in_closed_folder = false,
     disable_netrw = true,
     hijack_cursor = false,
     hijack_netrw = true,

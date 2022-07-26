@@ -77,7 +77,6 @@ return packer.startup(function(use)
             require "plugins.configs.feline"
         end,
     }
-
     -- Treesitter
     use {
         "nvim-treesitter/nvim-treesitter",
@@ -157,13 +156,28 @@ return packer.startup(function(use)
         end,
     }
 
+    use {
+        "rmagatti/auto-session",
+    }
+
+    use {
+        "rmagatti/session-lens",
+    }
+
     -- LSP
+    use {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        requires = {
+            "williamboman/mason-lspconfig.nvim",
+            "williamboman/mason.nvim",
+        },
+        run = ":MasonToolUpdate",
+    }
     use {
         "neovim/nvim-lspconfig",
         requires = {
             "folke/lua-dev.nvim",
             "jose-elias-alvarez/typescript.nvim",
-            "williamboman/nvim-lsp-installer",
         },
     }
     use {
@@ -189,7 +203,11 @@ return packer.startup(function(use)
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
         config = function()
-            require "plugins.configs.todo-comments"
+            require("todo-comments").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
         end,
     }
 

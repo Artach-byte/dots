@@ -255,7 +255,7 @@ icons.setup {
         },
         ["pnpm-lock.yaml"] = {
             icon = "",
-            color = colors.red,
+            color = colors.orange,
             name = "pnpmlock",
         },
         ["package.json"] = {
@@ -320,8 +320,8 @@ icons.setup {
         },
         ["Makefile"] = {
             icon = "",
-            color = colors.orange,
-            name = "Makefile",
+            color = colors.yellow,
+            name = "makefile",
         },
         ["tsconfig.build.json"] = {
             icon = "",
@@ -356,7 +356,17 @@ icons.setup {
         [".editorconfig"] = {
             icon = "",
             color = colors.bg0,
-            name = "procfile",
+            name = "editorconfig",
+        },
+        ["LICENSE"] = {
+            icon = "",
+            color = colors.blue,
+            name = "LICENSE",
+        },
+        snap = {
+            icon = "",
+            color = colors.fg,
+            name = "snap",
         },
     },
     default = true,
