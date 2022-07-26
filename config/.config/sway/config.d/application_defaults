@@ -1,11 +1,11 @@
 # Assign workspaces
-assign [app_id="firefox"] 2
+assign [app_id="firefox"] 3
 for_window [app_id="firefox"] focus
 
-assign [class="firefox"] 2
+assign [class="firefox"] 3
 for_window [class="firefox"] focus
 
-assign [class="obsidian"] 3
+assign [class="obsidian"] 2
 for_window [class="obsidian"] focus
 
 assign [class="thunderbird"] 4
