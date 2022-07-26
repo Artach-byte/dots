@@ -25,8 +25,8 @@ local colors = {
 return {
 	window_decorations = "NONE",
 	font = wezterm.font_with_fallback({
-		"Caskaydia Cove Nerd Font",
-		"Fira Code",
+		"Liga SFMono Nerd Font",
+		"CaskaydiaCove Nerd Font",
 	}),
 	font_size = 11.0,
 	line_height = 1.2,
