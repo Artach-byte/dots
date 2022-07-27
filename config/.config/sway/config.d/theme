@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Apply gtk theming
 exec_always ~/.config/sway/scripts/import-gsettings
 
@@ -12,7 +14,7 @@ default_border pixel 2
 font pango:Noto Sans Regular 10
 
 # Thin borders:
-smart_borders on
+# smart_borders on
 
 # Set wallpaper:
 exec swaybg -i ~/Pictures/wallpaper/nord_theme/nord_mac_wallpaper.png

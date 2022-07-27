@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Assign workspaces
 assign [app_id="firefox"] 3
 for_window [app_id="firefox"] focus
