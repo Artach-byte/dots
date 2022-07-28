@@ -188,19 +188,13 @@
 		"disable-markup": false,
 		"all-outputs": false,
 		"persistent_workspaces": {
-			"6": [],
-			"7": [],
-			"8": [],
-			"9": [],
+			 "9": [],
 			"10": []
 		},
 
 		"format": "  {icon}  ",
 		//"format":"{icon}",
 		"format-icons": {
-			"6": "VI",
-			"7": "VII",
-			"8": "VIII",
 			"9": "IX",
 			"10": "X"
 		}
