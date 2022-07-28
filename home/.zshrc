@@ -87,6 +87,6 @@ source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plu
 #                              Plugins End                                     #
 ################################################################################
 
-# NOTE: perfomance issues with config
+# PERF: perfomance issues with config
 # starship Prompt
 eval "$(starship init zsh)"
