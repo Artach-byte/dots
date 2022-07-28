@@ -1,113 +1,101 @@
 // Global
 [
-	{
-		"include": ["$HOME/.config/waybar/modules.jsonc"],
+  {
+    "include": ["$HOME/.config/waybar/modules.jsonc"],
 
-		"name": "mainbar",
-		"layer": "top",
-		"position": "top",
-		"output": "DP-1",
+    "name": "mainbar",
+    "layer": "top",
+    "position": "top",
+    "output": "DP-1",
 
-		"modules-left": [
-    "battery#bat1",
-    "battery#bat2",
-    "disk",
-    "memory",
-    "cpu",
-    "temperature",
-    "pulseaudio",
-    "backlight",
-    "idle_inhibitor",
-    "custom/pacman",
+    "modules-left": [
+      "battery#bat1",
+      "battery#bat2",
+      "disk",
+      "memory",
+      "cpu",
+      "temperature",
+      "pulseaudio",
+      "backlight",
+      "idle_inhibitor",
+      "custom/pacman"
     ],
 
-		"modules-center": ["sway/window"],
+    "modules-center": ["sway/window"],
 
-		"modules-right": [
-			"custom/weather",
-		  "network#vpn",
-			"network#wifi",
-			"network#ethernet",
-			"network#disconnected",
+    "modules-right": [
+      "custom/weather",
+      "network#vpn",
+      "network#wifi",
+      "network#ethernet",
+      "network#disconnected",
       "clock",
-			"custom/power",
-		]
-	},
-	{
-		"include": ["$HOME/.config/waybar/modules.jsonc"],
+      "custom/power"
+    ]
+  },
+  {
+    "include": ["$HOME/.config/waybar/modules.jsonc"],
 
-		"name": "mainbar-bottom",
-		"layer": "top",
-		"position": "bottom",
-		"output": "DP-1",
+    "name": "mainbar-bottom",
+    "layer": "top",
+    "position": "bottom",
+    "output": "DP-1",
 
-		// If height property would be not present, it'd be calculated dynamically
+    // If height property would be not present, it'd be calculated dynamically
 
-		"modules-left": [
-      "sway/workspaces"
+    "modules-left": ["sway/workspaces"],
+
+    "modules-center": ["wlr/taskbar"],
+
+    "modules-right": ["tray"]
+  },
+  {
+    "include": ["$HOME/.config/waybar/modules-right-display.jsonc"],
+
+    "name": "rightbar",
+    "layer": "top",
+    "position": "top",
+    "output": "HDMI-A-2",
+
+    "modules-left": [
+      "battery#bat1",
+      "battery#bat2",
+      "disk",
+      "memory",
+      "cpu",
+      "temperature",
+      "pulseaudio",
+      "backlight",
+      "idle_inhibitor",
+      "custom/pacman"
     ],
 
-		"modules-center": [
-    "wlr/taskbar",
-    ],
+    "modules-center": ["sway/window"],
 
-		"modules-right": [
-			"tray",
-		]
-	},
-	{
-		"include": ["$HOME/.config/waybar/modules-right-display.jsonc"],
+    "modules-right": [
+      "custom/weather",
+      "network#vpn",
+      "network#wifi",
+      "network#ethernet",
+      "network#disconnected",
+      "custom/power"
+    ]
+  },
 
-		"name": "rightbar",
-		"layer": "top",
-		"position": "top",
-		"output": "HDMI-A-2",
+  {
+    "include": ["$HOME/.config/waybar/modules-right-display.jsonc"],
 
-		"modules-left": [
-    "battery#bat1",
-    "battery#bat2",
-    "disk",
-    "memory",
-    "cpu",
-    "temperature",
-    "pulseaudio",
-    "backlight",
-    "idle_inhibitor",
-    "custom/pacman",
-    ],
+    "name": "rightbar-bottom",
+    "layer": "top",
+    "position": "bottom",
+    "output": "HDMI-A-2",
 
-		"modules-center": ["sway/window"],
+    // If height property would be not present, it'd be calculated dynamically
 
-		  "modules-right": [
-			"custom/weather",
-		  "network#vpn",
-			"network#wifi",
-			"network#ethernet",
-			"network#disconnected",
-			"custom/power",
-		]
-	},
+    "modules-left": ["sway/workspaces"],
 
-  	{
-		"include": ["$HOME/.config/waybar/modules-right-display.jsonc"],
+    "modules-center": ["wlr/taskbar"],
 
-		"name": "rightbar-bottom",
-		"layer": "top",
-		"position": "bottom",
-		"output": "HDMI-A-2",
-
-		// If height property would be not present, it'd be calculated dynamically
-
-		"modules-left": [
-      "sway/workspaces"
-    ],
-
-		"modules-center": [
-    "wlr/taskbar",
-    ],
-
-		"modules-right": [
-			"tray",
-		]
-	}
+    "modules-right": ["tray"]
+  }
 ]
