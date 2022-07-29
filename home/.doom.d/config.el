@@ -16,7 +16,7 @@
 ;; + `doom-variable-pitch-font'
 ;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
-(setq doom-font(font-spec :family "JetBrainsMono Nerd Font" :size 15))
+(setq doom-font(font-spec :family "Liga SFMono Nerd Font" :size 15))
 ;;
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
