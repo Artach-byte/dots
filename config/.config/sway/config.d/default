@@ -214,3 +214,7 @@ bindsym $mod+r mode "resize"
 # Keybindings List
 #
 #     bindsym $mod+t exec code ~/.config/sway/cheatsheet
+
+
+# Launch Emacs client
+      bindsym $mod+t exec emacsclient -nc
