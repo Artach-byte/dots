@@ -177,7 +177,7 @@
        ;;(wanderlust +gmail)
 
        :app
-       (calendar +org-gcal)
+       ;;(calendar +org-gcal)
        ;;emms
        ;;everywhere        ; *leave* Emacs!? You must be joking
        ;;irc               ; how neckbeards socialize
