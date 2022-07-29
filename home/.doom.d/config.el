@@ -37,7 +37,7 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
 
-;; (set-frame-parameter (selected-frame) 'alpha '(95 95))
+(set-frame-parameter (selected-frame) 'alpha '(95 95))
 
 ;;modeline (icons, config, battery)
 ;;(display-time-mode 1)                              ;Enable time in the mode-line
