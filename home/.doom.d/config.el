@@ -40,7 +40,7 @@
 (set-frame-parameter (selected-frame) 'alpha '(95 95))
 
 ;;modeline (icons, config, battery)
-;;(display-time-mode 1)                              ;Enable time in the mode-line
+(display-time-mode 1)                              ;Enable time in the mode-line
 ;;(display-battery-mode 1)                           ;display the battery
 (setq doom-modeline-major-mode-icon t)             ;Show major mode name
 (setq doom-modeline-enable-word-count t)           ;Show word count
