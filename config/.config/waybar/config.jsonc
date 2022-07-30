@@ -9,14 +9,11 @@
     "output": "DP-1",
 
     "modules-left": [
-      "battery#bat1",
-      "battery#bat2",
       "disk",
       "memory",
       "cpu",
       "temperature",
       "pulseaudio",
-      "backlight",
       "idle_inhibitor",
       "custom/pacman"
     ],
@@ -58,14 +55,11 @@
     "output": "HDMI-A-2",
 
     "modules-left": [
-      "battery#bat1",
-      "battery#bat2",
       "disk",
       "memory",
       "cpu",
       "temperature",
       "pulseaudio",
-      "backlight",
       "idle_inhibitor",
       "custom/pacman"
     ],
