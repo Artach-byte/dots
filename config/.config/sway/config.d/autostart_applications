@@ -23,3 +23,6 @@ exec /usr/bin/coolero
 
 # emacs daemon
 exec /usr/bin/emacs --daemon
+
+# autotiling
+exec /usr/bin/autotiling
