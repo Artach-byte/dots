@@ -7,10 +7,10 @@ format = """
 """
 
 [character]
-# success_symbol = "[>](green)[>](bold blue)[>](green)"
-# error_symbol = "[>](red)[>](bold yellow)[>](red)"
-success_symbol = "[](green)"
-error_symbol = "[](red)"
+success_symbol = "[>](green)[>](bold blue)[>](green)"
+error_symbol = "[>](red)[>](bold yellow)[>](red)"
+# success_symbol = "[](green)"
+# error_symbol = "[](red)"
 
 
 [directory]

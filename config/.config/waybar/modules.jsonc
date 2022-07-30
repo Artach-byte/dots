@@ -29,16 +29,19 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
   },
+
   "clock": {
     "interval": 1,
     "format": "<b>{:%I:%M %p}</b>",
     "format-alt": "{:%m-%d-%Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
+
   "cpu": {
     "format": " {usage}%",
     "tooltip": true
   },
+
   "disk": {
     "format": " {}%",
     "tooltip-format": "{used} / {total} used"
@@ -78,12 +81,14 @@
     "format": " {}%",
     "tooltip-format": "{used:0.1f}G / {total:0.1f}G used"
   },
+
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
     "format": "{icon} {temperatureC}°C",
     "format-icons": ["", "", "", "", ""]
   },
+
   "backlight": {
     "device": "intel_backlight",
     "interval": 1,
@@ -93,6 +98,7 @@
     "format-icons": ["", ""],
     "on-click": "wdisplays"
   },
+
   "battery#bat1": {
     "bat": "BAT0",
     "adapter": "AC",
@@ -103,6 +109,7 @@
       "good": 99,
       "empty": 5
     },
+
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
@@ -110,6 +117,7 @@
     "format-full": "",
     "format-icons": ["", "", "", "", ""]
   },
+
   "battery#bat2": {
     "bat": "BAT1",
     "adapter": "AC",
@@ -125,6 +133,7 @@
     "format-full": "",
     "format-icons": ["", "", "", "", ""]
   },
+
   "network#disconnected": {
     "tooltip-format": "No connection!",
     "format-ethernet": "",
@@ -133,6 +142,7 @@
     "format-disconnected": "",
     "on-click": "nm-connection-editor"
   },
+
   "network#ethernet": {
     "interface": "enp*",
     "format-ethernet": "",
@@ -142,6 +152,7 @@
     "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
     "on-click": "nm-connection-editor"
   },
+
   "network#wifi": {
     "format-ethernet": "",
     "format-wifi": " {essid} ({signalStrength}%)",
@@ -150,6 +161,7 @@
     "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
     "on-click": "nm-connection-editor"
   },
+
   "network#vpn": {
     "interface": "tun0",
     "format": "",
@@ -157,6 +169,7 @@
     "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
     "on-click": "nm-connection-editor"
   },
+
   "pulseaudio": {
     "scroll-step": 1,
     "format": "{icon} {volume}%{format_source}",
