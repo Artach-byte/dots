@@ -193,10 +193,10 @@
     "spacing": 10
   },
 
-  /* "sway/window": { */
-  /* 	"format": "{} ", */
-  /* 	"on-click": "swaymsg kill" */
-  /* }, */
+  "sway/window": {
+  	"format": "{} ",
+  	"on-click": "swaymsg kill"
+  },
 
   "wlr/taskbar": {
     "format": "{icon} {name}",
