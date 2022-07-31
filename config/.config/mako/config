@@ -1,7 +1,7 @@
 font=UbuntuMono 12.5
 
-background-color=#2e3440
-text-color=#d8dee9
+background-color=#282828
+text-color=#ebdbb2
 width=315
 height=200
 padding=10
@@ -13,7 +13,7 @@ layer=overlay
 
 border-size=1
 border-radius=5
-border-color=#5e81ac
+border-color=#d3869b
 
 default-timeout=5000
 
