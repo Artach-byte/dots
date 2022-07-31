@@ -1,8 +1,8 @@
 
-@define-color highlight #81a1c1;
-@define-color base1  #2e3440;
-@define-color base2 #2e3440;
-@define-color base3  #2e3440;
+@define-color highlight #d3869b;
+@define-color base1  #282828;
+@define-color base2 #282828;
+@define-color base3  #282828;
 
 *{
     font-family: UbuntuMono;
@@ -21,7 +21,7 @@
     margin: 5px;
     padding:10px;
     background-color: @base2;
-    margin-top: -22px;
+    /* margin-top: -22px; */
 }
 
 #text {
