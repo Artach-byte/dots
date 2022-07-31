@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 ################################################################################
 #                           History config                                     #
 ################################################################################
@@ -41,11 +48,11 @@ autoload -Uz compinit
 compinit
 
 # Nord theme for fzf
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color=fg:#e5e9f0,bg:#323844,hl:#81a1c1
---color=fg+:#e5e9f0,bg+:#323844,hl+:#81a1c1
---color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
---color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+# --color=fg:#e5e9f0,bg:#323844,hl:#81a1c1
+# --color=fg+:#e5e9f0,bg+:#323844,hl+:#81a1c1
+# --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
+# --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
 
 ## Alias config
 source ~/.config/zsh/aliases.zsh
@@ -80,6 +87,9 @@ source ~/.config/zsh/plugins/zsh-github-cli/cli.plugin.zsh
 ## zsh-exa -> https://github.com/TwoPizza9621536/zsh-exa
 source ~/.config/zsh/plugins/zsh-exa/zsh-exa.plugin.zsh
 
+# Powerlevel 10k Theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
 ## MUST BE LAST PLUGIN: syntax highlighting -> https://github.com/zsh-users/zsh-syntax-highlighting
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
@@ -89,4 +99,7 @@ source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plu
 
 # BUG: perfomance issues with config
 # starship Prompt
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
