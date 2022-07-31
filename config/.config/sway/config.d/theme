@@ -17,21 +17,26 @@ font pango:Noto Sans Regular 10
 # smart_borders on
 
 # Set wallpaper:
-exec swaybg -i ~/Pictures/wallpaper/nord_theme/nord_mac_wallpaper.png
+exec swaybg -i ~/Pictures/wallpaper/gruvbox/OpMPCR0.png
 
 # Title format for windows
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"
 for_window [shell="x_wayland"] title_format "%class - %title"
 
-# class                 border  bground text    indicator child_border
-client.focused          #5e81ac #5e81ac #F8F8F2 #6272A4   #5e81ac 
-client.focused_inactive #2e3440 #2e3440 #F8F8F2 #2e3440   #2e3440 
-client.unfocused        #2e3440 #2e3440 #BFBFBF #2e3440   #2e3440 
-client.urgent           #bf616a #bf616a #F8F8F2 #bf616a   #bf616a 
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
-client.background       #F8F8F2
+#### Sway Window Colors ####
+set $unfocused  #a6a1ae
+set $urgent     #f8928a
+set $normal     #d3869b
+set $inactive   #282828
 
-#
+# colors                    border        bg          text         indicator   chld_brdr
+client.focused              $normal     $normal     $unfocused     $normal     $normal
+client.focused_inactive     $inactive   $inactive   $unfocused     $inactive   $inactive
+client.unfocused            $unfocused  $unfocused  $unfocused     $unfocused  $unfocused
+client.urgent               $urgent     $urgent     $unfocused     $urgent     $urgent
+client.placeholder          $unfocused  $unfocused  $unfocused     $unfocused  $unfocused
+client.background           $unfocused#
+
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
